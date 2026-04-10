@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Science & Research",
+    "section": "",
+    "text": "This portfolio showcases interactive whitepapers and technical research. Unlike static PDFs, these reports allow for real-time data exploration and interactive visualization to better communicate complex findings."
+  },
+  {
+    "objectID": "index.html#about-the-lab",
+    "href": "index.html#about-the-lab",
+    "title": "Data Science & Research",
+    "section": "",
+    "text": "This portfolio showcases interactive whitepapers and technical research. Unlike static PDFs, these reports allow for real-time data exploration and interactive visualization to better communicate complex findings."
+  },
+  {
+    "objectID": "index.html#featured-research",
+    "href": "index.html#featured-research",
+    "title": "Data Science & Research",
+    "section": "2 Featured Research",
+    "text": "2 Featured Research"
+  },
+  {
     "objectID": "research/paper1.html",
     "href": "research/paper1.html",
     "title": "Interactive Neural Analysis",
@@ -34,26 +55,5 @@
       "Research",
       "Interactive Neural Analysis"
     ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Data Science & Research",
-    "section": "",
-    "text": "This portfolio showcases interactive whitepapers and technical research. Unlike static PDFs, these reports allow for real-time data exploration and interactive visualization to better communicate complex findings."
-  },
-  {
-    "objectID": "index.html#about-the-lab",
-    "href": "index.html#about-the-lab",
-    "title": "Data Science & Research",
-    "section": "",
-    "text": "This portfolio showcases interactive whitepapers and technical research. Unlike static PDFs, these reports allow for real-time data exploration and interactive visualization to better communicate complex findings."
-  },
-  {
-    "objectID": "index.html#featured-research",
-    "href": "index.html#featured-research",
-    "title": "Data Science & Research",
-    "section": "2 Featured Research",
-    "text": "2 Featured Research"
   }
 ]
