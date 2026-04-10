@@ -1,0 +1,21 @@
+---
+title: "Data Science & Research"
+subtitle: "Exploring the intersection of [Your Domain] and Machine Learning."
+listing:
+  contents: research
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [image, date, title, reading-time, description]
+page-layout: full
+title-block-banner: true
+---
+
+## About the Lab
+This portfolio showcases interactive whitepapers and technical research. Unlike static PDFs, these reports allow for real-time data exploration and interactive visualization to better communicate complex findings.
+
+---
+
+## Featured Research
