@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+:root {
+  --bs-body-font-size: 1rem;
+  --bs-body-font-family: Almarai, sans-serif;
+}
+
+body, p, li, td {
+  font-family: Almarai, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.hero-subtitle {
+  font-size: .8rem;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-family: Oswald, sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: .9rem;
+}
+
+h4 {
+  font-size: .8rem;
+}
+
