@@ -2,7 +2,7 @@
 # title: "Kenneth Breugelmans"
 # subtitle: "Data Scientist | Builder at Heart | Applying ML, Engineering & Operational Experience to Transform Terminal Operations"
 listing:
-  contents: research
+  contents: portfolio
   sort: "date desc"
   type: grid
   categories: false

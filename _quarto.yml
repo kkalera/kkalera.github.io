@@ -10,7 +10,7 @@ website:
         text: Home
       - text: "Portfolio"
         menu:
-          - href: research/rl_crane.qmd
+          - href: portfolio/rl_crane.qmd
             text: "RL Quay Crane"
         
 
