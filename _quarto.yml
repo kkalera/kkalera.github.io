@@ -1,0 +1,27 @@
+project:
+  type: website
+
+website:
+  title: "KB"
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Portfolio"
+        menu:
+          - href: portfolio/rl_crane.qmd
+            text: "RL Quay Crane"
+        
+
+format:
+  html:
+    theme: lux
+    css: styles.css
+    # fontsize: 1.1em
+    # code-fold: true       # Hides code behind a toggle
+    # toc: true             # Floating table of contents
+    # toc-location: left
+    # number-sections: true
+    # reference-location: margin  # Places citations in the margin (DeepMind style)
+    # citation-location: margin
