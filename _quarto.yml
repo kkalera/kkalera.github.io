@@ -7,11 +7,11 @@ website:
     background: primary
     left:
       - href: index.qmd
-        text: Resume
+        text: Home
       - text: "Portfolio"
         menu:
-          - href: research/paper1.qmd
-            text: "Interactive Neural Analysis"
+          - href: research/rl_crane.qmd
+            text: "RL Quay Crane"
         
 
 format:

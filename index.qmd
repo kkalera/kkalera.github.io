@@ -15,17 +15,183 @@ toc: false
 number-sections: false
 ---
 
+::: {.hero-header}
+![](img/profile.jpg){.profile_pic}
+
+::: {.hero-text}
 # Kenneth Breugelmans {.hero-title}
+
 ### Data Scientist | Builder at Heart | Applying ML, Engineering & Operational Experience to Transform Terminal Operations {.hero-subtitle}
+:::
+:::
+
 
 &nbsp;
 
 &nbsp;
 
-## About the Lab
+## About
 
-This portfolio showcases interactive whitepapers and technical research. Unlike static PDFs, these reports allow for real-time data exploration and interactive visualization to better communicate complex findings.
+I've spent years on the floor of one of Europe's busiest container terminals — operating quay cranes, driving straddle carriers, managing live cargo flows. I became a data scientist because I saw what better information could do for operations that still run largely on instinct and experience.
+
+Today I work at the intersection of heavy industry and modern data engineering: building integration layers for legacy terminal operating systems, designing digital twins that make real-time operations legible, and implementing reinforcement learning models for container optimization.
+
+I don't do mystery. You'll know what I'm building, why, and where it stands. I ask uncomfortable questions early so they don't become expensive problems later. If you need someone who understands your operations before touching your data, we'll get along well.
+
+&nbsp;
+
+&nbsp;
+
+## Expertise
+
+**Domain Knowledge:** Over a decade of hands-on experience across the full operational hierarchy of a large container terminal — from dockworker to straddle carrier driver to quay crane operator. I understand the workflows, constraints, and failure modes that don't appear in any manual.
+
+**Data Science & ML:** Machine learning, predictive modeling, and reinforcement learning applied to real operational problems — not benchmarks.
+
+**Systems & Engineering:** Integration architecture connecting legacy TOS infrastructure with modern applications. Full-stack development, CAD design, and a builder's instinct for making things work end to end.
+
+&nbsp;
+
+&nbsp;
+
+## Toolbox
+
+**Programming Languages:**
+
+ Python ![](/img/icons/python.png){.icon} [|]{.sep}  Mojo ![](/img/icons/mojo.svg){.icon} [|]{.sep}  SQL ![](/img/icons/sql.svg){.icon} [|]{.sep}  JS ![](/img/icons/javascript.png){.icon} [|]{.sep}  C# ![](/img/icons/csharp.svg){.icon} [|]{.sep}  Java ![](/img/icons/java.png){.icon} [|]{.sep}  Kotlin ![](/img/icons/kotlin.jpg){.icon} [|]{.sep}  GCODE ![](/img/icons/gcode.png){.icon}
 
 ---
 
-## Featured Research
+**Data Processing & Pipelines:**
+
+ Pandas ![](/img/icons/pandas.png){.icon} [|]{.sep}  Polars ![](/img/icons/polars.svg){.icon} [|]{.sep}  DuckDB ![](/img/icons/duckdb.svg){.icon} [|]{.sep}  Dask ![](/img/icons/dask.svg){.icon} [|]{.sep}  Numpy ![](/img/icons/numpy.svg){.icon} [|]{.sep}  Scikit-Learn ![](/img/icons/sklearn.png){.icon} [|]{.sep}  OpenCV ![](/img/icons/opencv.svg){.icon}
+
+---
+
+**Data Visualisation:**
+
+ Matplotlib ![](/img/icons/matplotlib.svg){.icon} [|]{.sep}  Plotly ![](/img/icons/plotly.svg){.icon} [|]{.sep}  Seaborn ![](/img/icons/seaborn.png){.icon} [|]{.sep}  Folium ![](/img/icons/folium.svg){.icon} [|]{.sep}  Tableau ![](/img/icons/tableau.png){.icon} [|]{.sep}  PowerBi ![](/img/icons/Power_BI_Logo.png){.icon}
+
+---
+
+**ML modelling:**
+
+ XGBoost ![](/img/icons/xgboost.jpg){.icon} [|]{.sep}  YDF ![](/img/icons/YDF.png){.icon} [|]{.sep}  LightGBM ![](/img/icons/LightGBM.png){.icon} [|]{.sep}  CatBoost ![](/img/icons/CatBoostLogo.png){.icon} [|]{.sep}  FastAi ![](/img/icons/fastai.png){.icon} [|]{.sep}  PyTorch ![](/img/icons/pytorch.png){.icon} [|]{.sep}  Lightning AI ![](/img/icons/lightning.png){.icon} [|]{.sep} Optuna ![](/img/icons/optuna.png){.icon} [|]{.sep} SHAP ![](/img/icons/shap.png){.icon} 
+
+---
+
+**Web & Publication:**
+
+ Flask ![](/img/icons/flask.svg){.icon} [|]{.sep}  Streamlit ![](/img/icons/streamlit.svg){.icon} [|]{.sep}  Deck GL ![](/img/icons/deckgl.png){.icon} [|]{.sep}  HTML ![](/img/icons/html.png){.icon} [|]{.sep}  Bootstrap ![](/img/icons/bootstrap.svg){.icon} [|]{.sep}  Vue ![](/img/icons/vue-svgrepo-com.svg){.icon} [|]{.sep}  Quarto ![](/img/icons/quarto.svg){.icon} 
+
+---
+
+**Cloud:**
+
+ Microsoft Azure ![](/img/icons/Microsoft_Azure.svg.png){.icon} [|]{.sep} Google Cloud ![](/img/icons/google.png){.icon} [|]{.sep}  Amazon aws ![](/img/icons/aws.png){.icon}
+
+---
+
+**Engineering & Simulation:**
+
+Unity ![](/img/icons/unity.svg){.icon} [|]{.sep} Autodesk Fusion 360 ![](/img/icons/autodesk-fusion-360-icon.svg){.icon} [|]{.sep} Autodesk Inventor ![](/img/icons/autodesk-inventor-icon.svg){.icon} [|]{.sep} Onshape ![](/img/icons/onshape-svgrepo-com.svg){.icon} [|]{.sep} SketchUp! ![](/img/icons/sketchup-icon.svg){.icon} 
+
+&nbsp;
+
+&nbsp;
+
+## Career Timeline
+
+```{=html}
+<div class="tl-wrap">
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">present<br>Jul 2024</span></div>
+  <div class="tl-spine"><div class="tl-dot current"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card current">
+      <span class="tl-badge badge-work">Current role</span>
+      <p class="tl-title">Data Scientist</p>
+      <p class="tl-org">MSC PSA European Terminal (MPET) · Antwerp</p>
+      <p class="tl-desc">Building ML pipelines, RL models for container optimisation, systems integration for legacy TOS infrastructure, and a real-time digital twin for operational decision-making.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Sep 2024<br>May 2023</span></div>
+  <div class="tl-spine"><div class="tl-dot edu"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card edu-card">
+      <span class="tl-badge badge-edu">Education</span>
+      <p class="tl-title">Data Science</p>
+      <p class="tl-org">Turing College · Online</p>
+      <p class="tl-desc">Intensive professional programme covering machine learning, data engineering, and applied statistics — completed while working full-time as a crane operator.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Jul 2024<br>Aug 2019</span></div>
+  <div class="tl-spine"><div class="tl-dot work"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card">
+      <p class="tl-title">Ship-to-Shore Crane Operator</p>
+      <p class="tl-org">MSC PSA European Terminal (MPET) · Antwerp</p>
+      <p class="tl-desc">Operating single and dual hoist cranes on some of the world's largest container vessels. Collaborated with technical teams on complex software and hardware troubleshooting.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Aug 2019<br>Aug 2017</span></div>
+  <div class="tl-spine"><div class="tl-dot work"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card">
+      <p class="tl-title">Straddle Carrier Operator</p>
+      <p class="tl-org">MSC PSA European Terminal (MPET) · Antwerp</p>
+      <p class="tl-desc">Container transport and yard logistics across complex terminal layouts. Responsible for equipment reliability checks and coordination with maintenance teams.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Jul 2024<br>Sep 2015</span></div>
+  <div class="tl-spine"><div class="tl-dot work"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card">
+      <p class="tl-title">Dock Worker</p>
+      <p class="tl-org">CEPA · Antwerp</p>
+      <p class="tl-desc">Container preparation, discharge coordination, and crane guidance under limited visibility conditions. Specialised in twistlock troubleshooting and live operational problem-solving.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Sep 2015<br>Mar 2013</span></div>
+  <div class="tl-spine"><div class="tl-dot work"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card">
+      <p class="tl-title">Production Operator</p>
+      <p class="tl-org">Xtraflex · Lier</p>
+      <p class="tl-desc">Custom Teflon hose fabrication to tight tolerances. Managed the Trax racing store, building bespoke brake lines for classic cars, rally cars, and racing motorcycles.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Aug-Sep 2011<br>Jul-Aug 2010</span></div>
+  <div class="tl-spine"><div class="tl-dot work"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card">
+      <p class="tl-title">Operator (summer job while studying)</p>
+      <p class="tl-org">Atlas Copco Airpower · Antwerp</p>
+      <p class="tl-desc">Installation of custom electrical modules into industrial compressors according to client specifications.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+```
+
+## Featured Portfolio

@@ -1,0 +1,30 @@
+---
+title: "RL Quay Crane"
+description: "Research into automating quay cranes with reinforcement learning"
+date: "2021-02-11"
+image: ../img/rl_crane.png # Add a small preview image for the grid
+categories: [Personal R&D Project, Deep Learning, Reinforcement Learning, Proof of Concept]
+---
+
+![](../img/rl_crane.png)
+
+## Overview
+This is a high-level overview. You can put key takeaways in the margin.
+
+::: {.column-margin}
+**Key Insight:** Model accuracy improved by 15% using this specific weight initialization.
+:::
+
+## Interactive Visualization
+
+```{=html}
+<div style="position:relative; width:100%; aspect-ratio:16/9;">
+  <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;"
+    src="https://www.youtube.com/embed/U9P5iYCrD-k?si=1VNXOxR6nzeM7TVu&amp;start=3"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+```
