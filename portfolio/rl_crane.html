@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-04-10">
-<meta name="description" content="A deep dive into weight initialization using interactive Plotly visualizations.">
+<meta name="dcterms.date" content="2021-02-11">
+<meta name="description" content="Research into automating quay cranes with reinforcement learning">
 
-<title>Interactive Neural Analysis – Research Portfolio</title>
+<title>RL Quay Crane – KB</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-220e2118e07079e502eab78749a06d10.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6356a6db659b44a716ae21d2745bcf65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,9 +74,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed slimcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Research Portfolio</span>
+    <span class="navbar-title">KB</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -97,80 +98,48 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="../research/paper1.html" aria-current="page"> 
-<span class="menu-text">Neural Networks</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-portfolio" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Portfolio</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-portfolio">    
+        <li>
+    <a class="dropdown-item" href="../portfolio/rl_crane.html">
+ <span class="dropdown-text">RL Quay Crane</span></a>
   </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/paper1.html">Research</a></li><li class="breadcrumb-item"><a href="../research/paper1.html">Interactive Neural Analysis</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Research</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../research/paper1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Interactive Neural Analysis</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="header-section-number">1</span> Executive Summary</a></li>
-  <li><a href="#interactive-visualization" id="toc-interactive-visualization" class="nav-link" data-scroll-target="#interactive-visualization"><span class="header-section-number">2</span> Interactive Visualization</a></li>
-  </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../research/paper1.html">Research</a></li><li class="breadcrumb-item"><a href="../research/paper1.html">Interactive Neural Analysis</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Interactive Neural Analysis</h1>
+<h1 class="title">RL Quay Crane</h1>
   <div class="quarto-categories">
+    <div class="quarto-category">Personal R&amp;D Project</div>
     <div class="quarto-category">Deep Learning</div>
-    <div class="quarto-category">Optimization</div>
+    <div class="quarto-category">Reinforcement Learning</div>
+    <div class="quarto-category">Proof of Concept</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A deep dive into weight initialization using interactive Plotly visualizations.
+    Research into automating quay cranes with reinforcement learning
   </div>
 </div>
 
@@ -181,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 10, 2026</p>
+      <p class="date">February 11, 2021</p>
     </div>
   </div>
   
@@ -193,17 +162,40 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="executive-summary" class="level2 page-columns page-full" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="executive-summary"><span class="header-section-number">1</span> Executive Summary</h2>
-<p>This is a high-level overview. You can put key takeaways in the margin.</p>
+<p><img src="../img/rl_crane.png" class="img-fluid"></p>
+<p><strong>Built with:</strong> Unity3D · ML-Agents · PPO · SAC</p>
+<section id="overview" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The aim of this project was to disprove the hypothesis of a colleague at the time, who stated that AI / ML could never replace quay crane operators. At the time, I was still a crane operator, with an interest in machine learning, determined to prove my colleague wrong. This sparked a year-long research journey to explore whether RL could learn to effectively operate a quay crane.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><strong>Key Insight:</strong> Model accuracy improved by 15% using this specific weight initialization.</p>
+<p><strong>Key Insight:</strong> By the end, I was (and still am) convinced that with enough resources, RL can perform 95% of the tasks a crane operator does.</p>
 </div></div></section>
-<section id="interactive-visualization" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="interactive-visualization"><span class="header-section-number">2</span> Interactive Visualization</h2>
-<p>Instead of a static PNG, use a library like Plotly.</p>
-<p>import plotly.express as px df = px.data.iris() fig = px.scatter(df, x=“sepal_width”, y=“sepal_length”, color=“species”) fig.show()</p>
+<section id="challenges" class="level2">
+<h2 class="anchored" data-anchor-id="challenges">Challenges</h2>
+<p><strong>Simulation</strong></p>
+<p>There was no quay crane simulation freely available. Commercial simulations existed, but they were not aimed at reinforcement learning and were prohibitively expensive. The only practical solution was to develop a custom simulator using the Unity3D game engine, which also served as the training backbone via the ML-Agents package. The simulation started out basic but grew in fidelity as the project progressed.</p>
+<p><strong>Navigating Unfamiliar Territory</strong></p>
+<p>At the time I had a strong interest in AI but lacked formal training or hands-on experience. Unity3D’s ML-Agents package provided curated, well-tested implementations of PPO and SAC, which allowed me to focus on the aspects of RL that mattered most: environment design, reward shaping, and learning curricula.</p>
+<p><strong>Limited Resources</strong></p>
+<p>Working without dedicated hardware meant visual inputs — as would be used in a production system — were not feasible. Instead, the model received structured positional inputs: crane position, spreader position and velocity, spreader distance to key objects, and a target location for the spreader. This constraint pushed cleaner state space design and faster iteration.</p>
+<p><strong>Complex Target Behaviour</strong></p>
+<p>The goal was not simply to move containers, but to do so safely — respecting operational safety rules and equipment limits. This is a skill that takes human operators months to develop. To address this, I designed a training curriculum that introduced progressively harder tasks as the model mastered each stage, guiding it from basic movement control through to safe, constrained container placement.</p>
+</section>
+<section id="training-process" class="level2">
+<h2 class="anchored" data-anchor-id="training-process">Training Process</h2>
+<p>In the video below, you can see the different stages of how the model learned.</p>
+<div style="position:relative; width:100%; aspect-ratio:16/9;">
+  <iframe style="position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/U9P5iYCrD-k?si=1VNXOxR6nzeM7TVu&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+  </iframe>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The project succeeded in its core goal. The trained agent learned to place containers precisely against existing stacks on a vessel, actively control spreader swing, and consistently respect the safety rules around minimum safe lift heights — behaviours that take human operators months to internalise.</p>
+<p>This convinced me that with sufficient compute and a well-designed environment, RL can realistically automate the majority of quay crane operations. The remaining gap lies not in the algorithm, but in simulation fidelity and resource investment.</p>
+<p>It was this realisation — that the domain I knew best was on the cusp of a fundamental shift — that led me to enrol in the Turing College data science programme and pursue a full career transition into the field.</p>
+<p>From here, the most natural extension would be expanding the scope to include shipboard operations: hatch cover handling, container discharge sequencing, and lashing coordination — tasks that today still depend entirely on human judgment.</p>
 
 
 </section>
@@ -282,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/kkalera\.github\.io\/");
+        var filterRegex = new RegExp("https:\/\/kenneth-b\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

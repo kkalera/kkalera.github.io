@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+:root {
+  --bs-body-font-size: 0.875rem;
+  --bs-body-font-family: Almarai, sans-serif;
+}
+
+body, p, li, td {
+  font-family: Almarai, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.hero-subtitle {
+  font-size: 0.75rem;
+}
+
+.hero-title {
+  font-size: 1.75rem;
+  font-family: Oswald, sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 1.05rem;
+}
+
+h3 {
+  font-size: 0.875rem;
+}
+
+h4 {
+  font-size: 0.75rem;
+}
+
+.icon{
+  max-width: 25px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.sep {
+  padding: 0 15px;
+  color: #aaa;
+}
+
+/* Career Timeline */
+.tl-wrap { padding: 1.5rem 0; max-width: 680px; }
+.tl-item { display: flex; gap: 0; position: relative; margin-bottom: 0; }
+.tl-left { width: 150px; min-width: 150px; text-align: right; padding-right: 20px; padding-top: 2px; }
+.tl-year { font-size: 13px; font-weight: 500; color: #6c757d; line-height: 1.4; }
+.tl-spine { display: flex; flex-direction: column; align-items: center; width: 20px; min-width: 20px; align-self: stretch; }
+.tl-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+.tl-dot.work { background: #1D9E75; }
+.tl-dot.edu { background: #7F77DD; }
+.tl-dot.current { background: #1D9E75; box-shadow: 0 0 0 3px rgba(29,158,117,0.18); }
+.tl-line { width: 1.5px; flex: 1; background: #dee2e6; margin-top: 4px; }
+.tl-item:last-child .tl-line { display: none; }
+.tl-right { padding: 0 0 1.5rem 16px; flex: 1; }
+.tl-card { background: #f8f9fa; border-radius: 6px; padding: 12px 16px; border: 1px solid #dee2e6; }
+.tl-card.current { border-color: rgba(29,158,117,0.4); }
+.tl-card.edu-card { border-color: rgba(127,119,221,0.4); }
+.tl-title { font-size: 14px; font-weight: 600; color: #212529; margin: 0 0 2px; }
+.tl-org { font-size: 13px; color: #6c757d; margin: 0 0 4px; }
+.tl-desc { font-size: 12px; color: #495057; margin: 0; line-height: 1.5; }
+.tl-badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 20px; margin-bottom: 6px; font-weight: 500; }
+.badge-work { background: #E1F5EE; color: #0F6E56; }
+.badge-edu { background: #EEEDFE; color: #3C3489; }
+
+.hero-header {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile_pic {
+  min-width: 10rem;
+  max-width: 10rem;
+  border-radius: 10%;
+  flex-shrink: 0;
+  margin-top: 1.3rem;
+}

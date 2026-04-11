@@ -1,59 +1,72 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Data Science & Research",
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Kenneth Breugelmans",
+    "section": "About",
+    "text": "About\nI’ve spent years on the floor of one of Europe’s busiest container terminals — operating quay cranes, driving straddle carriers, managing live cargo flows. I became a data scientist because I saw what better information could do for operations that still run largely on instinct and experience.\nToday I work at the intersection of heavy industry and modern data engineering: building integration layers for legacy terminal operating systems, designing digital twins that make real-time operations legible, and implementing reinforcement learning models for container optimization.\nI don’t do mystery. You’ll know what I’m building, why, and where it stands. I ask uncomfortable questions early so they don’t become expensive problems later. If you need someone who understands your operations before touching your data, we’ll get along well."
+  },
+  {
+    "objectID": "index.html#expertise",
+    "href": "index.html#expertise",
+    "title": "Kenneth Breugelmans",
+    "section": "Expertise",
+    "text": "Expertise\nDomain Knowledge: Over a decade of hands-on experience across the full operational hierarchy of a large container terminal — from dockworker to straddle carrier driver to quay crane operator. I understand the workflows, constraints, and failure modes that don’t appear in any manual.\nData Science & ML: Machine learning, predictive modeling, and reinforcement learning applied to real operational problems — not benchmarks.\nSystems & Engineering: Integration architecture connecting legacy TOS infrastructure with modern applications. Full-stack development, CAD design, and a builder’s instinct for making things work end to end."
+  },
+  {
+    "objectID": "index.html#toolbox",
+    "href": "index.html#toolbox",
+    "title": "Kenneth Breugelmans",
+    "section": "Toolbox",
+    "text": "Toolbox\nProgramming Languages:\nPython  | Mojo  | SQL  | JS  | C#  | Java  | Kotlin  | GCODE \n\nData Processing & Pipelines:\nPandas  | Polars  | DuckDB  | Dask  | Numpy  | Scikit-Learn  | OpenCV \n\nData Visualisation:\nMatplotlib  | Plotly  | Seaborn  | Folium  | Tableau  | PowerBi \n\nML modelling:\nXGBoost  | YDF  | LightGBM  | CatBoost  | FastAi  | PyTorch  | Lightning AI  | Optuna  | SHAP \n\nWeb & Publication:\nFlask  | Streamlit  | Deck GL  | HTML  | Bootstrap  | Vue  | Quarto \n\nCloud:\nMicrosoft Azure  | Google Cloud  | Amazon aws \n\nEngineering & Simulation:\nUnity  | Autodesk Fusion 360  | Autodesk Inventor  | Onshape  | SketchUp!"
+  },
+  {
+    "objectID": "index.html#career-timeline",
+    "href": "index.html#career-timeline",
+    "title": "Kenneth Breugelmans",
+    "section": "Career Timeline",
+    "text": "Career Timeline\n\n\n\n  presentJul 2024\n  \n  \n    \n      Current role\n      Data Scientist\n      MSC PSA European Terminal (MPET) · Antwerp\n      Building ML pipelines, RL models for container optimisation, systems integration for legacy TOS infrastructure, and a real-time digital twin for operational decision-making.\n    \n  \n\n\n\n  Sep 2024May 2023\n  \n  \n    \n      Education\n      Data Science\n      Turing College · Online\n      Intensive professional programme covering machine learning, data engineering, and applied statistics — completed while working full-time as a crane operator.\n    \n  \n\n\n\n  Jul 2024Aug 2019\n  \n  \n    \n      Ship-to-Shore Crane Operator\n      MSC PSA European Terminal (MPET) · Antwerp\n      Operating single and dual hoist cranes on some of the world's largest container vessels. Collaborated with technical teams on complex software and hardware troubleshooting.\n    \n  \n\n\n\n  Aug 2019Aug 2017\n  \n  \n    \n      Straddle Carrier Operator\n      MSC PSA European Terminal (MPET) · Antwerp\n      Container transport and yard logistics across complex terminal layouts. Responsible for equipment reliability checks and coordination with maintenance teams.\n    \n  \n\n\n\n  Jul 2024Sep 2015\n  \n  \n    \n      Dock Worker\n      CEPA · Antwerp\n      Container preparation, discharge coordination, and crane guidance under limited visibility conditions. Specialised in twistlock troubleshooting and live operational problem-solving.\n    \n  \n\n\n\n  Sep 2015Mar 2013\n  \n  \n    \n      Production Operator\n      Xtraflex · Lier\n      Custom Teflon hose fabrication to tight tolerances. Managed the Trax racing store, building bespoke brake lines for classic cars, rally cars, and racing motorcycles.\n    \n  \n\n\n\n  Aug-Sep 2011Jul-Aug 2010\n  \n  \n    \n      Operator (summer job while studying)\n      Atlas Copco Airpower · Antwerp\n      Installation of custom electrical modules into industrial compressors according to client specifications."
+  },
+  {
+    "objectID": "index.html#featured-portfolio",
+    "href": "index.html#featured-portfolio",
+    "title": "Kenneth Breugelmans",
+    "section": "Featured Portfolio",
+    "text": "Featured Portfolio"
+  },
+  {
+    "objectID": "portfolio/rl_crane.html",
+    "href": "portfolio/rl_crane.html",
+    "title": "RL Quay Crane",
     "section": "",
-    "text": "This portfolio showcases interactive whitepapers and technical research. Unlike static PDFs, these reports allow for real-time data exploration and interactive visualization to better communicate complex findings."
+    "text": "Built with: Unity3D · ML-Agents · PPO · SAC"
   },
   {
-    "objectID": "index.html#about-the-lab",
-    "href": "index.html#about-the-lab",
-    "title": "Data Science & Research",
-    "section": "",
-    "text": "This portfolio showcases interactive whitepapers and technical research. Unlike static PDFs, these reports allow for real-time data exploration and interactive visualization to better communicate complex findings."
+    "objectID": "portfolio/rl_crane.html#overview",
+    "href": "portfolio/rl_crane.html#overview",
+    "title": "RL Quay Crane",
+    "section": "Overview",
+    "text": "Overview\nThe aim of this project was to disprove the hypothesis of a colleague at the time, who stated that AI / ML could never replace quay crane operators. At the time, I was still a crane operator, with an interest in machine learning, determined to prove my colleague wrong. This sparked a year-long research journey to explore whether RL could learn to effectively operate a quay crane.\n\n\nKey Insight: By the end, I was (and still am) convinced that with enough resources, RL can perform 95% of the tasks a crane operator does."
   },
   {
-    "objectID": "index.html#featured-research",
-    "href": "index.html#featured-research",
-    "title": "Data Science & Research",
-    "section": "2 Featured Research",
-    "text": "2 Featured Research"
+    "objectID": "portfolio/rl_crane.html#challenges",
+    "href": "portfolio/rl_crane.html#challenges",
+    "title": "RL Quay Crane",
+    "section": "Challenges",
+    "text": "Challenges\nSimulation\nThere was no quay crane simulation freely available. Commercial simulations existed, but they were not aimed at reinforcement learning and were prohibitively expensive. The only practical solution was to develop a custom simulator using the Unity3D game engine, which also served as the training backbone via the ML-Agents package. The simulation started out basic but grew in fidelity as the project progressed.\nNavigating Unfamiliar Territory\nAt the time I had a strong interest in AI but lacked formal training or hands-on experience. Unity3D’s ML-Agents package provided curated, well-tested implementations of PPO and SAC, which allowed me to focus on the aspects of RL that mattered most: environment design, reward shaping, and learning curricula.\nLimited Resources\nWorking without dedicated hardware meant visual inputs — as would be used in a production system — were not feasible. Instead, the model received structured positional inputs: crane position, spreader position and velocity, spreader distance to key objects, and a target location for the spreader. This constraint pushed cleaner state space design and faster iteration.\nComplex Target Behaviour\nThe goal was not simply to move containers, but to do so safely — respecting operational safety rules and equipment limits. This is a skill that takes human operators months to develop. To address this, I designed a training curriculum that introduced progressively harder tasks as the model mastered each stage, guiding it from basic movement control through to safe, constrained container placement."
   },
   {
-    "objectID": "research/paper1.html",
-    "href": "research/paper1.html",
-    "title": "Interactive Neural Analysis",
-    "section": "",
-    "text": "This is a high-level overview. You can put key takeaways in the margin.\n\n\nKey Insight: Model accuracy improved by 15% using this specific weight initialization.",
-    "crumbs": [
-      "Home",
-      "Research",
-      "Interactive Neural Analysis"
-    ]
+    "objectID": "portfolio/rl_crane.html#training-process",
+    "href": "portfolio/rl_crane.html#training-process",
+    "title": "RL Quay Crane",
+    "section": "Training Process",
+    "text": "Training Process\nIn the video below, you can see the different stages of how the model learned."
   },
   {
-    "objectID": "research/paper1.html#executive-summary",
-    "href": "research/paper1.html#executive-summary",
-    "title": "Interactive Neural Analysis",
-    "section": "",
-    "text": "This is a high-level overview. You can put key takeaways in the margin.\n\n\nKey Insight: Model accuracy improved by 15% using this specific weight initialization.",
-    "crumbs": [
-      "Home",
-      "Research",
-      "Interactive Neural Analysis"
-    ]
-  },
-  {
-    "objectID": "research/paper1.html#interactive-visualization",
-    "href": "research/paper1.html#interactive-visualization",
-    "title": "Interactive Neural Analysis",
-    "section": "2 Interactive Visualization",
-    "text": "2 Interactive Visualization\nInstead of a static PNG, use a library like Plotly.\nimport plotly.express as px df = px.data.iris() fig = px.scatter(df, x=“sepal_width”, y=“sepal_length”, color=“species”) fig.show()",
-    "crumbs": [
-      "Home",
-      "Research",
-      "Interactive Neural Analysis"
-    ]
+    "objectID": "portfolio/rl_crane.html#conclusion",
+    "href": "portfolio/rl_crane.html#conclusion",
+    "title": "RL Quay Crane",
+    "section": "Conclusion",
+    "text": "Conclusion\nThe project succeeded in its core goal. The trained agent learned to place containers precisely against existing stacks on a vessel, actively control spreader swing, and consistently respect the safety rules around minimum safe lift heights — behaviours that take human operators months to internalise.\nThis convinced me that with sufficient compute and a well-designed environment, RL can realistically automate the majority of quay crane operations. The remaining gap lies not in the algorithm, but in simulation fidelity and resource investment.\nIt was this realisation — that the domain I knew best was on the cusp of a fundamental shift — that led me to enrol in the Turing College data science programme and pursue a full career transition into the field.\nFrom here, the most natural extension would be expanding the scope to include shipboard operations: hatch cover handling, container discharge sequencing, and lashing coordination — tasks that today still depend entirely on human judgment."
   }
 ]

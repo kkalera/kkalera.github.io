@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Science &amp; Research – Research Portfolio</title>
+<title>KB</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-220e2118e07079e502eab78749a06d10.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6356a6db659b44a716ae21d2745bcf65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-reading-time','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -132,9 +132,10 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -142,7 +143,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Research Portfolio</span>
+    <span class="navbar-title">KB</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -155,96 +156,181 @@ window.Quarto = {
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./research/paper1.html"> 
-<span class="menu-text">Neural Networks</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-portfolio" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Portfolio</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-portfolio">    
+        <li>
+    <a class="dropdown-item" href="./portfolio/rl_crane.html">
+ <span class="dropdown-text">RL Quay Crane</span></a>
   </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Data Science &amp; Research</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Data Science &amp; Research</h1>
-            <p class="subtitle lead">Exploring the intersection of [Your Domain] and Machine Learning.</p>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-body">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Research</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./research/paper1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Interactive Neural Analysis</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#about-the-lab" id="toc-about-the-lab" class="nav-link active" data-scroll-target="#about-the-lab"><span class="header-section-number">1</span> About the Lab</a></li>
-  <li><a href="#featured-research" id="toc-featured-research" class="nav-link" data-scroll-target="#featured-research"><span class="header-section-number">2</span> Featured Research</a></li>
-  </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGVlcCUyMExlYXJuaW5n">Deep Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3B0aW1pemF0aW9u">Optimization <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-body" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
-
-<section id="about-the-lab" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="about-the-lab"><span class="header-section-number">1</span> About the Lab</h2>
-<p>This portfolio showcases interactive whitepapers and technical research. Unlike static PDFs, these reports allow for real-time data exploration and interactive visualization to better communicate complex findings.</p>
-<hr>
+<div class="hero-header">
+<p><img src="img/profile.jpg" class="profile_pic img-fluid"></p>
+<section id="kenneth-breugelmans" class="level1 hero-title hero-text">
+<h1 class="hero-title">Kenneth Breugelmans</h1>
+<section id="data-scientist-builder-at-heart-applying-ml-engineering-operational-experience-to-transform-terminal-operations" class="level3 hero-subtitle">
+<h3 class="hero-subtitle anchored" data-anchor-id="data-scientist-builder-at-heart-applying-ml-engineering-operational-experience-to-transform-terminal-operations">Data Scientist | Builder at Heart | Applying ML, Engineering &amp; Operational Experience to Transform Terminal Operations</h3>
 </section>
-<section id="featured-research" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="featured-research"><span class="header-section-number">2</span> Featured Research</h2>
+</section>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
+<p>I’ve spent years on the floor of one of Europe’s busiest container terminals — operating quay cranes, driving straddle carriers, managing live cargo flows. I became a data scientist because I saw what better information could do for operations that still run largely on instinct and experience.</p>
+<p>Today I work at the intersection of heavy industry and modern data engineering: building integration layers for legacy terminal operating systems, designing digital twins that make real-time operations legible, and implementing reinforcement learning models for container optimization.</p>
+<p>I don’t do mystery. You’ll know what I’m building, why, and where it stands. I ask uncomfortable questions early so they don’t become expensive problems later. If you need someone who understands your operations before touching your data, we’ll get along well.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</section>
+<section id="expertise" class="level2">
+<h2 class="anchored" data-anchor-id="expertise">Expertise</h2>
+<p><strong>Domain Knowledge:</strong> Over a decade of hands-on experience across the full operational hierarchy of a large container terminal — from dockworker to straddle carrier driver to quay crane operator. I understand the workflows, constraints, and failure modes that don’t appear in any manual.</p>
+<p><strong>Data Science &amp; ML:</strong> Machine learning, predictive modeling, and reinforcement learning applied to real operational problems — not benchmarks.</p>
+<p><strong>Systems &amp; Engineering:</strong> Integration architecture connecting legacy TOS infrastructure with modern applications. Full-stack development, CAD design, and a builder’s instinct for making things work end to end.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</section>
+<section id="toolbox" class="level2">
+<h2 class="anchored" data-anchor-id="toolbox">Toolbox</h2>
+<p><strong>Programming Languages:</strong></p>
+<p>Python <img src="./img/icons/python.png" class="icon img-fluid"> <span class="sep">|</span> Mojo <img src="./img/icons/mojo.svg" class="icon img-fluid"> <span class="sep">|</span> SQL <img src="./img/icons/sql.svg" class="icon img-fluid"> <span class="sep">|</span> JS <img src="./img/icons/javascript.png" class="icon img-fluid"> <span class="sep">|</span> C# <img src="./img/icons/csharp.svg" class="icon img-fluid"> <span class="sep">|</span> Java <img src="./img/icons/java.png" class="icon img-fluid"> <span class="sep">|</span> Kotlin <img src="./img/icons/kotlin.jpg" class="icon img-fluid"> <span class="sep">|</span> GCODE <img src="./img/icons/gcode.png" class="icon img-fluid"></p>
+<hr>
+<p><strong>Data Processing &amp; Pipelines:</strong></p>
+<p>Pandas <img src="./img/icons/pandas.png" class="icon img-fluid"> <span class="sep">|</span> Polars <img src="./img/icons/polars.svg" class="icon img-fluid"> <span class="sep">|</span> DuckDB <img src="./img/icons/duckdb.svg" class="icon img-fluid"> <span class="sep">|</span> Dask <img src="./img/icons/dask.svg" class="icon img-fluid"> <span class="sep">|</span> Numpy <img src="./img/icons/numpy.svg" class="icon img-fluid"> <span class="sep">|</span> Scikit-Learn <img src="./img/icons/sklearn.png" class="icon img-fluid"> <span class="sep">|</span> OpenCV <img src="./img/icons/opencv.svg" class="icon img-fluid"></p>
+<hr>
+<p><strong>Data Visualisation:</strong></p>
+<p>Matplotlib <img src="./img/icons/matplotlib.svg" class="icon img-fluid"> <span class="sep">|</span> Plotly <img src="./img/icons/plotly.svg" class="icon img-fluid"> <span class="sep">|</span> Seaborn <img src="./img/icons/seaborn.png" class="icon img-fluid"> <span class="sep">|</span> Folium <img src="./img/icons/folium.svg" class="icon img-fluid"> <span class="sep">|</span> Tableau <img src="./img/icons/tableau.png" class="icon img-fluid"> <span class="sep">|</span> PowerBi <img src="./img/icons/Power_BI_Logo.png" class="icon img-fluid"></p>
+<hr>
+<p><strong>ML modelling:</strong></p>
+<p>XGBoost <img src="./img/icons/xgboost.jpg" class="icon img-fluid"> <span class="sep">|</span> YDF <img src="./img/icons/YDF.png" class="icon img-fluid"> <span class="sep">|</span> LightGBM <img src="./img/icons/LightGBM.png" class="icon img-fluid"> <span class="sep">|</span> CatBoost <img src="./img/icons/CatBoostLogo.png" class="icon img-fluid"> <span class="sep">|</span> FastAi <img src="./img/icons/fastai.png" class="icon img-fluid"> <span class="sep">|</span> PyTorch <img src="./img/icons/pytorch.png" class="icon img-fluid"> <span class="sep">|</span> Lightning AI <img src="./img/icons/lightning.png" class="icon img-fluid"> <span class="sep">|</span> Optuna <img src="./img/icons/optuna.png" class="icon img-fluid"> <span class="sep">|</span> SHAP <img src="./img/icons/shap.png" class="icon img-fluid"></p>
+<hr>
+<p><strong>Web &amp; Publication:</strong></p>
+<p>Flask <img src="./img/icons/flask.svg" class="icon img-fluid"> <span class="sep">|</span> Streamlit <img src="./img/icons/streamlit.svg" class="icon img-fluid"> <span class="sep">|</span> Deck GL <img src="./img/icons/deckgl.png" class="icon img-fluid"> <span class="sep">|</span> HTML <img src="./img/icons/html.png" class="icon img-fluid"> <span class="sep">|</span> Bootstrap <img src="./img/icons/bootstrap.svg" class="icon img-fluid"> <span class="sep">|</span> Vue <img src="./img/icons/vue-svgrepo-com.svg" class="icon img-fluid"> <span class="sep">|</span> Quarto <img src="./img/icons/quarto.svg" class="icon img-fluid"></p>
+<hr>
+<p><strong>Cloud:</strong></p>
+<p>Microsoft Azure <img src="./img/icons/Microsoft_Azure.svg.png" class="icon img-fluid"> <span class="sep">|</span> Google Cloud <img src="./img/icons/google.png" class="icon img-fluid"> <span class="sep">|</span> Amazon aws <img src="./img/icons/aws.png" class="icon img-fluid"></p>
+<hr>
+<p><strong>Engineering &amp; Simulation:</strong></p>
+<p>Unity <img src="./img/icons/unity.svg" class="icon img-fluid"> <span class="sep">|</span> Autodesk Fusion 360 <img src="./img/icons/autodesk-fusion-360-icon.svg" class="icon img-fluid"> <span class="sep">|</span> Autodesk Inventor <img src="./img/icons/autodesk-inventor-icon.svg" class="icon img-fluid"> <span class="sep">|</span> Onshape <img src="./img/icons/onshape-svgrepo-com.svg" class="icon img-fluid"> <span class="sep">|</span> SketchUp! <img src="./img/icons/sketchup-icon.svg" class="icon img-fluid"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</section>
+<section id="career-timeline" class="level2">
+<h2 class="anchored" data-anchor-id="career-timeline">Career Timeline</h2>
+<div class="tl-wrap">
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">present<br>Jul 2024</span></div>
+  <div class="tl-spine"><div class="tl-dot current"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card current">
+      <span class="tl-badge badge-work">Current role</span>
+      <p class="tl-title">Data Scientist</p>
+      <p class="tl-org">MSC PSA European Terminal (MPET) · Antwerp</p>
+      <p class="tl-desc">Building ML pipelines, RL models for container optimisation, systems integration for legacy TOS infrastructure, and a real-time digital twin for operational decision-making.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Sep 2024<br>May 2023</span></div>
+  <div class="tl-spine"><div class="tl-dot edu"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card edu-card">
+      <span class="tl-badge badge-edu">Education</span>
+      <p class="tl-title">Data Science</p>
+      <p class="tl-org">Turing College · Online</p>
+      <p class="tl-desc">Intensive professional programme covering machine learning, data engineering, and applied statistics — completed while working full-time as a crane operator.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Jul 2024<br>Aug 2019</span></div>
+  <div class="tl-spine"><div class="tl-dot work"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card">
+      <p class="tl-title">Ship-to-Shore Crane Operator</p>
+      <p class="tl-org">MSC PSA European Terminal (MPET) · Antwerp</p>
+      <p class="tl-desc">Operating single and dual hoist cranes on some of the world's largest container vessels. Collaborated with technical teams on complex software and hardware troubleshooting.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Aug 2019<br>Aug 2017</span></div>
+  <div class="tl-spine"><div class="tl-dot work"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card">
+      <p class="tl-title">Straddle Carrier Operator</p>
+      <p class="tl-org">MSC PSA European Terminal (MPET) · Antwerp</p>
+      <p class="tl-desc">Container transport and yard logistics across complex terminal layouts. Responsible for equipment reliability checks and coordination with maintenance teams.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Jul 2024<br>Sep 2015</span></div>
+  <div class="tl-spine"><div class="tl-dot work"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card">
+      <p class="tl-title">Dock Worker</p>
+      <p class="tl-org">CEPA · Antwerp</p>
+      <p class="tl-desc">Container preparation, discharge coordination, and crane guidance under limited visibility conditions. Specialised in twistlock troubleshooting and live operational problem-solving.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Sep 2015<br>Mar 2013</span></div>
+  <div class="tl-spine"><div class="tl-dot work"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card">
+      <p class="tl-title">Production Operator</p>
+      <p class="tl-org">Xtraflex · Lier</p>
+      <p class="tl-desc">Custom Teflon hose fabrication to tight tolerances. Managed the Trax racing store, building bespoke brake lines for classic cars, rally cars, and racing motorcycles.</p>
+    </div>
+  </div>
+</div>
+
+<div class="tl-item">
+  <div class="tl-left"><span class="tl-year">Aug-Sep 2011<br>Jul-Aug 2010</span></div>
+  <div class="tl-spine"><div class="tl-dot work"></div><div class="tl-line"></div></div>
+  <div class="tl-right">
+    <div class="tl-card">
+      <p class="tl-title">Operator (summer job while studying)</p>
+      <p class="tl-org">Atlas Copco Airpower · Antwerp</p>
+      <p class="tl-desc">Installation of custom electrical modules into industrial compressors according to client specifications.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</section>
+<section id="featured-portfolio" class="level2">
+<h2 class="anchored" data-anchor-id="featured-portfolio">Featured Portfolio</h2>
 
 
 
@@ -252,23 +338,23 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RGVlcCUyMExlYXJuaW5nJTJDT3B0aW1pemF0aW9u" data-listing-date-sort="1775779200000" data-listing-file-modified-sort="1775848484341" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="46">
-<a href="./research/paper1.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-categories="UGVyc29uYWwlMjBSJTI2RCUyMFByb2plY3QlMkNEZWVwJTIwTGVhcm5pbmclMkNSZWluZm9yY2VtZW50JTIwTGVhcm5pbmclMkNQcm9vZiUyMG9mJTIwQ29uY2VwdA==" data-listing-date-sort="1613001600000" data-listing-file-modified-sort="1775918755147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="528">
+<a href="./portfolio/rl_crane.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./research/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./img/rl_crane.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Interactive Neural Analysis
+RL Quay Crane
 </h5>
-<div class="listing-reading-time card-text text-muted">1 min</div>
+<div class="listing-reading-time card-text text-muted">3 min</div>
 <div class="card-text listing-description delink">
-<p>A deep dive into weight initialization using interactive Plotly visualizations.</p>
+<p>Research into automating quay cranes with reinforcement learning</p>
 </div>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
-Apr 10, 2026
+Feb 11, 2021
 </div>
 </div>
 </div>
@@ -350,7 +436,7 @@ Apr 10, 2026
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/kkalera\.github\.io\/");
+        var filterRegex = new RegExp("https:\/\/kenneth-b\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
