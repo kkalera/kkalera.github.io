@@ -12,6 +12,8 @@ website:
         menu:
           - href: portfolio/rl_crane.qmd
             text: "RL Quay Crane"
+          - href: portfolio/integration_layer.qmd
+            text: "Operational Integration Layer"
         
 
 format:
