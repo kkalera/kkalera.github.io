@@ -1,7 +1,7 @@
 ---
 title: "Operational Integration Layer"
 description: "Production-grade integration layer connecting a container terminal's TOS to ML model pipelines — enabling automated operational decisions without modifying the core system"
-date: "2021-02-11"
+date: "2026-04-11"
 image: ../img/integration_layer.png
 categories: [Proof of Concept, Systems Integration, In Progress, Anonymised]
 ---
