@@ -35,6 +35,41 @@
     "text": "Featured Portfolio"
   },
   {
+    "objectID": "portfolio/integration_layer.html#summary",
+    "href": "portfolio/integration_layer.html#summary",
+    "title": "Operational Integration Layer",
+    "section": "Summary",
+    "text": "Summary\nDesigned and built a production-grade integration layer connecting a large container terminal’s Terminal Operating System (TOS) to allow the execution of certain actions based on ML models — fundamentally changing how the terminal plans, monitors, and makes decisions at scale. This opened up a realm of possibilities to automate repetitive tasks so our workforce can focus on the complex operations instead of boilerplate actions."
+  },
+  {
+    "objectID": "portfolio/integration_layer.html#context-problem",
+    "href": "portfolio/integration_layer.html#context-problem",
+    "title": "Operational Integration Layer",
+    "section": "Context & Problem",
+    "text": "Context & Problem\nContainer terminal operations generate vast amounts of real-time data, yet traditional TOS environments are largely closed systems. Yard planning, equipment allocation, and operational reporting have historically relied on manual processes and fragmented tooling — creating bottlenecks that scale poorly with terminal throughput.\nWe wanted to solve this by using ML models to reduce the manual actions our workforce had to make, allowing them to focus on exception handling. However, the legacy TOS provided no such connectivity out of the box, and modifications to the TOS were not a viable option given the constraints we were facing.\nThere was a clear need for an integration layer that could bridge the operational core with the actions that the ML model predicted without making any changes to the TOS. We wanted the ability to roll-back to manual actions at any point if necessary."
+  },
+  {
+    "objectID": "portfolio/integration_layer.html#what-was-built",
+    "href": "portfolio/integration_layer.html#what-was-built",
+    "title": "Operational Integration Layer",
+    "section": "What Was Built",
+    "text": "What Was Built\n\n01 · TOS Integration\nExposed TOS actions through a structured API layer, enabling downstream systems to trigger automated operations within the TOS — without any modifications to the TOS itself.\n\n\n02 · ML Model Pipeline\nWired ML models directly into the operational data flow, targeting automated yard planning — a process previously dependent on expert manual intervention throughout the shift cycle.\n\n\n03 · Exception-First Workflow\nShifted the operational model from routine manual planning to exception handling — freeing workforce capacity for high-judgement decisions that genuinely require human expertise."
+  },
+  {
+    "objectID": "portfolio/integration_layer.html#impact",
+    "href": "portfolio/integration_layer.html#impact",
+    "title": "Operational Integration Layer",
+    "section": "Impact",
+    "text": "Impact\n\n~90% target reduction in manual yard planning effort.\nBy automating routine planning decisions, operational staff are repositioned toward exception handling and strategic oversight — a fundamental shift in how human expertise is applied at scale in one of Europe’s largest container terminals."
+  },
+  {
+    "objectID": "portfolio/integration_layer.html#why-this-matters",
+    "href": "portfolio/integration_layer.html#why-this-matters",
+    "title": "Operational Integration Layer",
+    "section": "Why This Matters",
+    "text": "Why This Matters\nThis project sits at the intersection of domain expertise and modern data engineering. The integration layer is not a standard analytics project — it required deep knowledge of terminal operations, data pipeline architecture, and an understanding of where automation genuinely adds value versus where human judgment remains irreplaceable.\nThe result is a system that makes the terminal’s existing workforce measurably more effective, rather than replacing the operational knowledge it runs on.\n\nRole: Lead Developer — Data Science, Python, API Design, ML Integration"
+  },
+  {
     "objectID": "portfolio/rl_crane.html",
     "href": "portfolio/rl_crane.html",
     "title": "RL Quay Crane",

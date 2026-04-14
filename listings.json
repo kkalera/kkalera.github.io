@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/portfolio/integration_layer.html",
       "/portfolio/rl_crane.html"
     ]
   }
