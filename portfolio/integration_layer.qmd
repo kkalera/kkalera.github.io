@@ -1,0 +1,64 @@
+---
+title: "Operational Integration Layer"
+description: "Production-grade integration layer connecting a container terminal's TOS to ML model pipelines — enabling automated operational decisions without modifying the core system"
+date: "2021-02-11"
+image: ../img/integration_layer.png
+categories: [Proof of Concept, Systems Integration, In Progress, Anonymised]
+---
+
+![](../img/integration_layer.png)
+
+::: {.callout-note appearance="minimal"}
+**Status:** Proof of Concept / In Progress / Anonymised
+:::
+
+## Summary
+
+Designed and built a production-grade integration layer connecting a large container terminal's Terminal Operating System (TOS) to allow the execution of certain actions based on ML models — fundamentally changing how the terminal plans, monitors, and makes decisions at scale. This opened up a realm of possibilities to automate repetitive tasks so our workforce can focus on the complex operations instead of boilerplate actions.
+
+---
+
+## Context & Problem
+
+Container terminal operations generate vast amounts of real-time data, yet traditional TOS environments are largely closed systems. Yard planning, equipment allocation, and operational reporting have historically relied on manual processes and fragmented tooling — creating bottlenecks that scale poorly with terminal throughput.
+
+We wanted to solve this by using ML models to reduce the manual actions our workforce had to make, allowing them to focus on exception handling. However, the legacy TOS provided no such connectivity out of the box, and modifications to the TOS were not a viable option given the constraints we were facing.
+
+There was a clear need for an integration layer that could bridge the operational core with the actions that the ML model predicted without making any changes to the TOS. We wanted the ability to roll-back to manual actions at any point if necessary.
+
+---
+
+## What Was Built
+
+### 01 · TOS Integration
+
+Exposed TOS actions through a structured API layer, enabling downstream systems to trigger automated operations within the TOS — without any modifications to the TOS itself.
+
+### 02 · ML Model Pipeline
+
+Wired ML models directly into the operational data flow, targeting automated yard planning — a process previously dependent on expert manual intervention throughout the shift cycle.
+
+
+### 03 · Exception-First Workflow
+
+Shifted the operational model from routine manual planning to exception handling — freeing workforce capacity for high-judgement decisions that genuinely require human expertise.
+
+---
+
+## Impact
+
+> **~90% target reduction in manual yard planning effort.**
+>
+> By automating routine planning decisions, operational staff are repositioned toward exception handling and strategic oversight — a fundamental shift in how human expertise is applied at scale in one of Europe's largest container terminals.
+
+---
+
+## Why This Matters
+
+This project sits at the intersection of domain expertise and modern data engineering. The integration layer is not a standard analytics project — it required deep knowledge of terminal operations, data pipeline architecture, and an understanding of where automation genuinely adds value versus where human judgment remains irreplaceable.
+
+The result is a system that makes the terminal's existing workforce measurably more effective, rather than replacing the operational knowledge it runs on.
+
+---
+
+*Role: **Lead Developer** — Data Science, Python, API Design, ML Integration*
