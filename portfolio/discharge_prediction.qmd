@@ -1,0 +1,69 @@
+---
+title: "Predicted Container Discharge Time"
+description: "ML model predicting when individual containers will be discharged during active vessel operations — shifting trucker arrivals from reactive to planned"
+date: "2025-03-01"
+image: ../img/discharge_prediction.png
+categories: [Machine Learning, Predictive Modelling, In Progress, Anonymised]
+---
+
+<!-- Replace ../img/discharge_prediction.png with an actual screenshot when available -->
+
+::: {.callout-note appearance="minimal"}
+**Status:** In Progress / Anonymised
+:::
+
+## Summary
+
+A predictive model estimating discharge time for individual containers during active vessel operations. Truckers historically waited until a ship had fully departed before planning a pickup — with no reliable signal on when individual containers would be accessible. The model gives a discharge window hours in advance, letting hauliers plan their arrival before the quay clears. Achieved **84% of predictions within one hour** of actual discharge time.
+
+---
+
+## Context & Problem
+
+Container discharge follows a sequence dictated by vessel stowage plans, crane assignments, and operational priorities. For a trucker waiting to collect a container, the uncertainty is significant — a large vessel can take days to fully discharge, and a container in the lower holds may not surface until the final hours.
+
+The practical consequence was a predictable pattern: truckers would wait until the vessel had departed — a public signal that discharge was complete — before making their move. This created a rush of arrivals in a short window, congesting the gate and yard precisely when the terminal was at its most strained post-discharge.
+
+The root cause was informational, not operational. Truckers weren't being irrational — they simply had no earlier signal they could trust.
+
+---
+
+## What Was Built
+
+### 01 · Discharge Sequence Modelling
+
+The model ingests vessel stowage data, real-time crane positions and work queues, and historical discharge rate profiles to estimate when each container will reach the quay surface and be available for collection.
+
+### 02 · Prediction Window Output
+
+Rather than a point estimate, the model outputs a time window — giving hauliers a usable planning horizon while being honest about uncertainty. The 84% within-one-hour accuracy figure applies to this window.
+
+### 03 · Haulier Communication Interface
+
+Predictions are surfaced through a notification layer that reaches truckers and logistics coordinators before the vessel departs — giving them enough lead time to adjust arrival scheduling.
+
+---
+
+## Impact
+
+::: {.column-margin}
+**84%** of predictions within 1 hour of actual discharge time.
+:::
+
+> **Truckers arrive when containers are ready — not after the ship has left.**
+>
+> By shifting trucker behaviour from reactive (post-departure rush) to planned (staggered pre-departure arrivals), the model reduces gate congestion and yard pressure in the critical post-discharge window.
+
+The improvement compounds: a less congested gate means faster processing per truck, which means the remaining queue clears faster — a positive feedback loop triggered by better information.
+
+---
+
+## Why This Matters
+
+This project is a clean example of how predictive models create value not by replacing decisions, but by giving the people making decisions a better information environment. No trucker needed to change their incentives — they simply needed a signal they could trust.
+
+The 84% accuracy figure is also a floor, not a ceiling. As the model ingests more operational history and the stowage data pipeline matures, that number improves. The architecture was built to retrain continuously as new discharge data arrives.
+
+---
+
+*Role: **Lead Developer** — Python, Scikit-Learn, XGBoost, TOS Data Pipeline*

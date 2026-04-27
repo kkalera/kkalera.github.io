@@ -14,6 +14,12 @@ website:
             text: "RL Quay Crane"
           - href: portfolio/integration_layer.qmd
             text: "Operational Integration Layer"
+          - href: portfolio/digital_twin.qmd
+            text: "Terminal Digital Twin"
+          - href: portfolio/discharge_prediction.qmd
+            text: "Predicted Container Discharge Time"
+          - href: portfolio/point_in_time.qmd
+            text: "Point-in-Time Data Reconstruction"
         
 
 format:

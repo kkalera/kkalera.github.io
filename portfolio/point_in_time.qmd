@@ -1,0 +1,63 @@
+---
+title: "Point-in-Time Data Reconstruction"
+description: "CDC-based pipeline capturing every live mutation to TOS tables and streaming them to the cloud — enabling full reconstruction of any table's state at any point in time"
+date: "2025-01-01"
+image: ../img/point_in_time.png
+categories: [Data Engineering, Systems Integration, Anonymised]
+---
+
+<!-- Replace ../img/point_in_time.png with an actual screenshot when available -->
+
+::: {.callout-note appearance="minimal"}
+**Status:** In Production / Anonymised
+:::
+
+## Summary
+
+A CDC-based pipeline capturing every live mutation to critical TOS tables and streaming them to the cloud via Qlik — enabling full point-in-time reconstruction of any table's state, down to the minute. The TOS's only native option was periodic snapshots, leaving large gaps whenever retroactive analysis or incident investigation required knowing exactly what the data looked like during a specific operation.
+
+---
+
+## Context & Problem
+
+A container terminal's TOS is a living database. Container positions, planning decisions, equipment assignments, and operational statuses are updated continuously — dozens of changes per minute across hundreds of tables during an active shift.
+
+For analytical and audit purposes, knowing the *current* state of the TOS is rarely enough. The questions that matter most are historical: what did the yard plan look like at 14:30 when the vessel started discharging? What was the container's recorded position at the moment the discrepancy was logged? What changed between shift handover and the incident?
+
+SQL Server's native tooling offered one answer: scheduled snapshots. Take a copy of the table every hour, or every shift. In practice, this means any event that occurred between snapshots is invisible. For a terminal that processes thousands of container moves per shift, an hourly snapshot is not a history — it is a highlight reel with most frames missing.
+
+---
+
+## What Was Built
+
+### 01 · CDC Capture via Qlik
+
+Qlik's Change Data Capture layer was configured to intercept every INSERT, UPDATE, and DELETE on the target TOS tables — capturing not just the new state but the before-image, the operation type, and a precise timestamp for each change.
+
+### 02 · Cloud Streaming Pipeline
+
+Captured changes are streamed continuously to cloud storage, building an append-only log of every mutation. The log is partitioned and indexed to make point-in-time queries performant across months of history without full table scans.
+
+### 03 · Point-in-Time Reconstruction
+
+A query layer sits on top of the change log, allowing any table to be reconstructed as it existed at any arbitrary timestamp. This is exposed to analysts and ML pipelines as a simple interface: *give me this table as it was at T*.
+
+---
+
+## Impact
+
+> **Complete, queryable change history — replacing snapshot gaps with a continuous record.**
+>
+> Incident investigations that previously required guesswork — or were simply impossible — now have an authoritative answer. ML models can train on historically accurate feature states rather than the current snapshot at query time, eliminating a class of data leakage that is easy to miss and hard to quantify.
+
+---
+
+## Why This Matters
+
+Snapshot-based data pipelines create a subtle but serious problem for machine learning: the data used to train a model reflects what the database *currently says happened*, not what it said *at the time the decision was made*. In a TOS where records are corrected after the fact — which is routine — these two things are meaningfully different.
+
+Point-in-time reconstruction eliminates that gap. It also turns every past incident into a fully replayable event, which is the foundation for robust model evaluation and operational post-mortems.
+
+---
+
+*Role: **Lead Developer** — Qlik, SQL Server CDC, Cloud Data Pipeline, Python*

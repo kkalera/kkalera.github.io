@@ -1,0 +1,221 @@
+---
+format:
+  typst:
+    papersize: a4
+    margin:
+      top: 2cm
+      bottom: 2cm
+      left: 2cm
+      right: 2cm
+    font-size: 10pt
+    mainfont: "Liberation Serif"
+execute:
+  echo: false
+---
+
+```{=typst}
+#set page(margin: (top: 1.8cm, bottom: 1.8cm, left: 2cm, right: 2cm))
+#set text(font: "Liberation Sans", size: 10pt)
+#set par(justify: true, leading: 0.65em)
+
+// ── COLOUR PALETTE ──────────────────────────────────────────────────────────
+#let accent   = rgb("#1a3a5c")   // deep navy
+#let muted    = rgb("#555555")
+#let light    = rgb("#888888")
+#let divider  = rgb("#cccccc")
+
+// ── HELPERS ─────────────────────────────────────────────────────────────────
+#let section-title(t) = {
+  v(0.6em)
+  text(font: "Liberation Sans", size: 11pt, weight: "bold", fill: accent, upper(t))
+  line(length: 100%, stroke: 0.5pt + accent)
+  v(0.25em)
+}
+
+#let job(title, org, period, desc) = {
+  grid(
+    columns: (1fr, auto),
+    text(weight: "bold", title),
+    text(fill: light, size: 9pt, period)
+  )
+  text(fill: muted, style: "italic", org)
+  v(0.2em)
+  text(desc)
+  v(0.5em)
+}
+
+#let edu-item(degree, org, period, desc) = {
+  grid(
+    columns: (1fr, auto),
+    text(weight: "bold", degree),
+    text(fill: light, size: 9pt, period)
+  )
+  text(fill: muted, style: "italic", org)
+  v(0.2em)
+  text(desc)
+  v(0.5em)
+}
+
+#let skill-row(category, items) = {
+  grid(
+    columns: (3.5cm, 1fr),
+    gutter: 0.5em,
+    text(weight: "bold", size: 9pt, fill: accent, category),
+    text(size: 9pt, items)
+  )
+  v(0.15em)
+}
+
+// ── HEADER ───────────────────────────────────────────────────────────────────
+#align(center)[
+  #text(size: 22pt, weight: "bold", fill: accent)[Kenneth Breugelmans]
+  #v(0.2em)
+  #text(size: 11pt, fill: muted)[Data Scientist · MSC PSA European Terminal · Antwerp, Belgium]
+  #v(0.25em)
+  #text(size: 9pt, fill: light)[
+    #link("mailto:kennethbreugelmans@gmail.com")[kennethbreugelmans\@gmail.com]
+    #h(1em) · #h(1em)
+    #link("https://kenneth-b.com")[https://kenneth-b.com]
+    #h(1em) · #h(1em)
+    #link("https://kkalera.github.io")[kkalera.github.io]
+    #h(1em) · #h(1em)
+    LinkedIn: kenneth-breugelmans
+  ]
+]
+
+#v(1em)
+#line(length: 100%, stroke: 1pt + accent)
+#v(1em)
+
+// ── PROFILE ──────────────────────────────────────────────────────────────────
+#section-title("Profile")
+
+I've spent years on the floor of one of Europe's busiest container terminals — operating quay cranes, driving straddle carriers, managing live cargo flows. I became a data scientist because I saw what better information could do for operations that still run largely on instinct and experience.
+
+Today I work at the intersection of heavy industry and modern data engineering: building integration layers for legacy terminal operating systems, designing digital twins that make real-time operations legible, and implementing reinforcement learning models for container optimisation. I don't do mystery — you'll know what I'm building, why, and where it stands.
+
+#v(1em)
+// ── EXPERIENCE ───────────────────────────────────────────────────────────────
+#section-title("Experience")
+
+#job(
+  "Data Scientist",
+  "MSC PSA European Terminal (MPET) · Antwerp",
+  "Jul 2024 – Present",
+  "Building ML pipelines and RL models for container optimisation. Designed and implemented a production-grade integration layer connecting the terminal's legacy TOS to ML-driven decision pipelines — enabling automated operational actions without modifying the core system. Building a real-time digital twin for operational decision-making and monitoring."
+)
+#v(1em)
+#job(
+  "Ship-to-Shore Crane Operator",
+  "MSC PSA European Terminal (MPET) · Antwerp",
+  "Aug 2019 – Jul 2024",
+  "Operated single and dual hoist cranes on some of the world's largest container vessels. Collaborated with technical teams on complex software and hardware troubleshooting. Completed a full-time Data Science programme (Turing College) in parallel with this role."
+)
+#v(1em)
+#job(
+  "Straddle Carrier Operator",
+  "MSC PSA European Terminal (MPET) · Antwerp",
+  "Aug 2017 – Aug 2019",
+  "Container transport and yard logistics across complex terminal layouts. Responsible for equipment reliability checks and coordination with maintenance teams."
+)
+#v(1em)
+#job(
+  "Dock Worker",
+  "CEPA · Antwerp",
+  "Sep 2015 – Jul 2024",
+  "Container preparation, discharge coordination, and crane guidance under limited visibility conditions. Specialised in twistlock troubleshooting and live operational problem-solving."
+)
+#pagebreak()
+#job(
+  "Production Operator",
+  "Xtraflex · Lier",
+  "Mar 2013 – Sep 2015",
+  "Custom Teflon hose fabrication to tight tolerances. Managed the Trax racing store — building bespoke brake lines for classic cars, rally cars, and racing motorcycles."
+)
+
+#v(1em)
+#job(
+  "Operator (seasonal)",
+  "Atlas Copco Airpower · Antwerp",
+  "Summers 2010 & 2011",
+  "Installation of custom electrical modules into industrial compressors according to client specifications."
+)
+
+#v(1em)
+// ── EDUCATION ────────────────────────────────────────────────────────────────
+#section-title("Education")
+
+#edu-item(
+  "Data Science — Professional Programme",
+  "Turing College · Online",
+  "May 2023 – Sep 2024",
+  "Intensive programme covering machine learning, data engineering, deep learning, and applied statistics. Completed while working full-time as a crane operator on rotating shift patterns."
+)
+
+#v(1em)
+// ── SKILLS ───────────────────────────────────────────────────────────────────
+#section-title("Technical Skills")
+
+#skill-row("Languages", "Python · SQL · JavaScript · C# · Java · Kotlin · Mojo · GCODE")
+#skill-row("Data & Pipelines", "Pandas · Polars · DuckDB · Dask · NumPy · Scikit-Learn · OpenCV")
+#skill-row("ML & Modelling", "XGBoost · LightGBM · CatBoost · FastAI · PyTorch · Lightning AI · Optuna · SHAP")
+#skill-row("RL & Simulation", "Unity3D · ML-Agents · PPO · SAC")
+#skill-row("Visualisation", "Matplotlib · Plotly · Seaborn · Folium · Tableau · Power BI · Deck.gl")
+#skill-row("Web & Publishing", "Flask · Streamlit · Vue · HTML/Bootstrap · Quarto")
+#skill-row("Cloud", "Microsoft Azure · Google Cloud · Amazon AWS")
+#skill-row("CAD / Engineering", "Autodesk Fusion 360 · Autodesk Inventor · Onshape · SketchUp")
+
+#v(1em)
+// ── PROJECTS ─────────────────────────────────────────────────────────────────
+#section-title("Selected Projects")
+
+#job(
+  "Point-in-Time Data Reconstruction",
+  "MSC PSA European Terminal (MPET) — Production",
+  "2024 – Present",
+  "CDC-based pipeline capturing every live mutation to critical TOS tables and streaming them to the cloud via Qlik — enabling full point-in-time reconstruction of any table's state, down to the second. The TOS's only native option was periodic snapshots, leaving large gaps whenever retroactive analysis or incident investigation required knowing exactly what the data looked like during a specific operation. The pipeline replaced that blind spot with a complete, queryable change history that persists indefinitely."
+)
+#v(1em)
+#job(
+  "Predicted Discharge Time",
+  "MSC PSA European Terminal (MPET) — Production",
+  "2024 – Present",
+  "Predictive model estimating container discharge time during active vessel operations. Truckers historically waited until a ship had fully departed before planning pickup — with no reliable signal on when individual containers would be accessible. The model gives a discharge window hours in advance, letting hauliers plan their arrival before the quay clears. Achieved 84% of predictions within one hour of actual discharge time."
+)
+#v(1em)
+#job(
+  "Digital Twin - Proof of Concept",
+  "MSC PSA European Terminal (MPET) — Production",
+  "2024 – Present",
+  "Web-based real-time digital twin of the terminal's live operational state — ingesting data from the TOS and equipment systems to render yard occupancy, vessel positions, crane assignments, and equipment movements as they happen. Giving planners and shift supervisors a single coherent view of what is actually happening on the terminal, replacing the patchwork of screens and radio calls that operational awareness previously depended on."
+)
+#v(1em)
+#job(
+  "Operational Integration Layer",
+  "MSC PSA European Terminal (MPET) — Production",
+  "2024 – Present",
+  "Production-grade integration layer bridging a legacy TOS with ML model pipelines. Enables automated operational decisions at scale with full roll-back capability. Built with Python, C#, REST APIs, and event-driven architecture."
+)
+#v(1em)
+#job(
+  "RL Quay Crane",
+  "Personal R&D — Proof of Concept",
+  "2021",
+  "Custom Unity3D simulator and RL training environment to explore whether a reinforcement learning agent could replicate quay crane operator behaviour. Trained agents using PPO and SAC via ML-Agents. Concluded that RL can handle ~95% of crane tasks given sufficient compute and training time."
+)
+
+#v(1em)
+// ── DOMAIN KNOWLEDGE ─────────────────────────────────────────────────────────
+#section-title("Domain Knowledge")
+
+Over a decade of hands-on experience across the full operational hierarchy of a large container terminal — from dockworker to straddle carrier driver to quay crane operator. Deep understanding of the workflows, physical constraints, and failure modes that do not appear in any manual: berth planning, yard density management, equipment choreography under vessel deadlines, and the human factors that determine whether a shift runs smoothly or doesn't.
+
+#v(1em)
+// ── LANGUAGES ────────────────────────────────────────────────────────────────
+#section-title("Languages")
+
+#skill-row("Dutch", "Native")
+#skill-row("English", "Professional proficiency (duolingo certified 130/160)")
+#skill-row("French", "Basic")
+
+```
