@@ -3,6 +3,9 @@
     "listing": "/index.html",
     "items": [
       "/portfolio/integration_layer.html",
+      "/portfolio/digital_twin.html",
+      "/portfolio/discharge_prediction.html",
+      "/portfolio/point_in_time.html",
       "/portfolio/rl_crane.html"
     ]
   }

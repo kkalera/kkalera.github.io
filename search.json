@@ -35,41 +35,6 @@
     "text": "Featured Portfolio"
   },
   {
-    "objectID": "portfolio/integration_layer.html#summary",
-    "href": "portfolio/integration_layer.html#summary",
-    "title": "Operational Integration Layer",
-    "section": "Summary",
-    "text": "Summary\nDesigned and built a production-grade integration layer connecting a large container terminal’s Terminal Operating System (TOS) to allow the execution of certain actions based on ML models — fundamentally changing how the terminal plans, monitors, and makes decisions at scale. This opened up a realm of possibilities to automate repetitive tasks so our workforce can focus on the complex operations instead of boilerplate actions."
-  },
-  {
-    "objectID": "portfolio/integration_layer.html#context-problem",
-    "href": "portfolio/integration_layer.html#context-problem",
-    "title": "Operational Integration Layer",
-    "section": "Context & Problem",
-    "text": "Context & Problem\nContainer terminal operations generate vast amounts of real-time data, yet traditional TOS environments are largely closed systems. Yard planning, equipment allocation, and operational reporting have historically relied on manual processes and fragmented tooling — creating bottlenecks that scale poorly with terminal throughput.\nWe wanted to solve this by using ML models to reduce the manual actions our workforce had to make, allowing them to focus on exception handling. However, the legacy TOS provided no such connectivity out of the box, and modifications to the TOS were not a viable option given the constraints we were facing.\nThere was a clear need for an integration layer that could bridge the operational core with the actions that the ML model predicted without making any changes to the TOS. We wanted the ability to roll-back to manual actions at any point if necessary."
-  },
-  {
-    "objectID": "portfolio/integration_layer.html#what-was-built",
-    "href": "portfolio/integration_layer.html#what-was-built",
-    "title": "Operational Integration Layer",
-    "section": "What Was Built",
-    "text": "What Was Built\n\n01 · TOS Integration\nExposed TOS actions through a structured API layer, enabling downstream systems to trigger automated operations within the TOS — without any modifications to the TOS itself.\n\n\n02 · ML Model Pipeline\nWired ML models directly into the operational data flow, targeting automated yard planning — a process previously dependent on expert manual intervention throughout the shift cycle.\n\n\n03 · Exception-First Workflow\nShifted the operational model from routine manual planning to exception handling — freeing workforce capacity for high-judgement decisions that genuinely require human expertise."
-  },
-  {
-    "objectID": "portfolio/integration_layer.html#impact",
-    "href": "portfolio/integration_layer.html#impact",
-    "title": "Operational Integration Layer",
-    "section": "Impact",
-    "text": "Impact\n\n~90% target reduction in manual yard planning effort.\nBy automating routine planning decisions, operational staff are repositioned toward exception handling and strategic oversight — a fundamental shift in how human expertise is applied at scale in one of Europe’s largest container terminals."
-  },
-  {
-    "objectID": "portfolio/integration_layer.html#why-this-matters",
-    "href": "portfolio/integration_layer.html#why-this-matters",
-    "title": "Operational Integration Layer",
-    "section": "Why This Matters",
-    "text": "Why This Matters\nThis project sits at the intersection of domain expertise and modern data engineering. The integration layer is not a standard analytics project — it required deep knowledge of terminal operations, data pipeline architecture, and an understanding of where automation genuinely adds value versus where human judgment remains irreplaceable.\nThe result is a system that makes the terminal’s existing workforce measurably more effective, rather than replacing the operational knowledge it runs on.\n\nRole: Lead Developer — Data Science, Python, API Design, ML Integration"
-  },
-  {
     "objectID": "portfolio/rl_crane.html",
     "href": "portfolio/rl_crane.html",
     "title": "RL Quay Crane",
@@ -103,5 +68,166 @@
     "title": "RL Quay Crane",
     "section": "Conclusion",
     "text": "Conclusion\nThe project succeeded in its core goal. The trained agent learned to place containers precisely against existing stacks on a vessel, actively control spreader swing, and consistently respect the safety rules around minimum safe lift heights — behaviours that take human operators months to internalise.\nThis convinced me that with sufficient compute and a well-designed environment, RL can realistically automate the majority of quay crane operations. The remaining gap lies not in the algorithm, but in simulation fidelity and resource investment.\nIt was this realisation — that the domain I knew best was on the cusp of a fundamental shift — that led me to enrol in the Turing College data science programme and pursue a full career transition into the field.\nFrom here, the most natural extension would be expanding the scope to include shipboard operations: hatch cover handling, container discharge sequencing, and lashing coordination — tasks that today still depend entirely on human judgment."
+  },
+  {
+    "objectID": "portfolio/discharge_prediction.html",
+    "href": "portfolio/discharge_prediction.html",
+    "title": "Predicted Container Discharge Time",
+    "section": "",
+    "text": "Status: In Progress / Anonymised"
+  },
+  {
+    "objectID": "portfolio/discharge_prediction.html#summary",
+    "href": "portfolio/discharge_prediction.html#summary",
+    "title": "Predicted Container Discharge Time",
+    "section": "Summary",
+    "text": "Summary\nA predictive model estimating discharge time for individual containers during active vessel operations. Truckers historically waited until a ship had fully departed before planning a pickup — with no reliable signal on when individual containers would be accessible. The model gives a discharge window hours in advance, letting hauliers plan their arrival before the quay clears. Achieved 84% of predictions within one hour of actual discharge time."
+  },
+  {
+    "objectID": "portfolio/discharge_prediction.html#context-problem",
+    "href": "portfolio/discharge_prediction.html#context-problem",
+    "title": "Predicted Container Discharge Time",
+    "section": "Context & Problem",
+    "text": "Context & Problem\nContainer discharge follows a sequence dictated by vessel stowage plans, crane assignments, and operational priorities. For a trucker waiting to collect a container, the uncertainty is significant — a large vessel can take days to fully discharge, and a container in the lower holds may not surface until the final hours.\nThe practical consequence was a predictable pattern: truckers would wait until the vessel had departed — a public signal that discharge was complete — before making their move. This created a rush of arrivals in a short window, congesting the gate and yard precisely when the terminal was at its most strained post-discharge.\nThe root cause was informational, not operational. Truckers weren’t being irrational — they simply had no earlier signal they could trust."
+  },
+  {
+    "objectID": "portfolio/discharge_prediction.html#what-was-built",
+    "href": "portfolio/discharge_prediction.html#what-was-built",
+    "title": "Predicted Container Discharge Time",
+    "section": "What Was Built",
+    "text": "What Was Built\n\n01 · Discharge Sequence Modelling\nThe model ingests vessel stowage data, real-time crane positions and work queues, and historical discharge rate profiles to estimate when each container will reach the quay surface and be available for collection.\n\n\n02 · Prediction Window Output\nRather than a point estimate, the model outputs a time window — giving hauliers a usable planning horizon while being honest about uncertainty. The 84% within-one-hour accuracy figure applies to this window.\n\n\n03 · Haulier Communication Interface\nPredictions are surfaced through a notification layer that reaches truckers and logistics coordinators before the vessel departs — giving them enough lead time to adjust arrival scheduling."
+  },
+  {
+    "objectID": "portfolio/discharge_prediction.html#impact",
+    "href": "portfolio/discharge_prediction.html#impact",
+    "title": "Predicted Container Discharge Time",
+    "section": "Impact",
+    "text": "Impact\n\n\n84% of predictions within 1 hour of actual discharge time.\n\nTruckers arrive when containers are ready — not after the ship has left.\nBy shifting trucker behaviour from reactive (post-departure rush) to planned (staggered pre-departure arrivals), the model reduces gate congestion and yard pressure in the critical post-discharge window.\n\nThe improvement compounds: a less congested gate means faster processing per truck, which means the remaining queue clears faster — a positive feedback loop triggered by better information."
+  },
+  {
+    "objectID": "portfolio/discharge_prediction.html#why-this-matters",
+    "href": "portfolio/discharge_prediction.html#why-this-matters",
+    "title": "Predicted Container Discharge Time",
+    "section": "Why This Matters",
+    "text": "Why This Matters\nThis project is a clean example of how predictive models create value not by replacing decisions, but by giving the people making decisions a better information environment. No trucker needed to change their incentives — they simply needed a signal they could trust.\nThe 84% accuracy figure is also a floor, not a ceiling. As the model ingests more operational history and the stowage data pipeline matures, that number improves. The architecture was built to retrain continuously as new discharge data arrives.\n\nRole: Lead Developer — Python, Scikit-Learn, XGBoost, TOS Data Pipeline"
+  },
+  {
+    "objectID": "portfolio/digital_twin.html",
+    "href": "portfolio/digital_twin.html",
+    "title": "Terminal Digital Twin",
+    "section": "",
+    "text": "Status: In Progress / Anonymised"
+  },
+  {
+    "objectID": "portfolio/digital_twin.html#summary",
+    "href": "portfolio/digital_twin.html#summary",
+    "title": "Terminal Digital Twin",
+    "section": "Summary",
+    "text": "Summary\nA web-based digital twin of the terminal’s live operational state — ingesting data from the TOS and equipment systems to render yard occupancy, vessel positions, crane assignments, and equipment movements as they happen. Designed to give planners and shift supervisors a single coherent view of what is actually happening on the terminal, replacing the patchwork of screens and radio calls that operational awareness previously depended on."
+  },
+  {
+    "objectID": "portfolio/digital_twin.html#context-problem",
+    "href": "portfolio/digital_twin.html#context-problem",
+    "title": "Terminal Digital Twin",
+    "section": "Context & Problem",
+    "text": "Context & Problem\nContainer terminals are dense, high-velocity environments. At any given moment, dozens of cranes are working, hundreds of straddle carriers are moving, vessels are loading and discharging simultaneously, and the yard is in constant flux. Yet the tools available to supervisors and planners have historically been tabular TOS screens — lists, not pictures.\nThe result is that operational awareness is fragmented. A supervisor who wants to know the state of the terminal has to cross-reference multiple systems, call colleagues on the radio, and build a mental model from disconnected data sources. Under time pressure — which is the permanent state of a live terminal — that process breaks down.\nThere was no tool that answered the simplest question a planner can ask: what does the terminal actually look like right now?"
+  },
+  {
+    "objectID": "portfolio/digital_twin.html#what-was-built",
+    "href": "portfolio/digital_twin.html#what-was-built",
+    "title": "Terminal Digital Twin",
+    "section": "What Was Built",
+    "text": "What Was Built\n\n01 · Live Data Ingestion\nThe twin ingests real-time operational data from the TOS — container positions, crane assignments, vessel berthing state, yard block occupancy — and keeps a continuously updated representation of terminal state in memory.\n\n\n02 · Web-Based Visualisation\nA browser-based interface renders the terminal in spatial context: containers in their yard positions, cranes on their berths, vessels at their quays. State updates are pushed live so the view reflects what is happening now, not what was true when the page loaded.\n\n\n03 · Operational Overlays\nPlanners can layer additional context over the base map — congestion indicators, equipment utilisation, workload distribution across the yard — to support shift decisions without switching between systems."
+  },
+  {
+    "objectID": "portfolio/digital_twin.html#impact",
+    "href": "portfolio/digital_twin.html#impact",
+    "title": "Terminal Digital Twin",
+    "section": "Impact",
+    "text": "Impact\n\nOperational awareness consolidated into a single real-time view.\nThe twin removes the need to mentally assemble a picture of the terminal from disconnected data sources. Supervisors can see what is happening, where, and at what scale — without a radio call."
+  },
+  {
+    "objectID": "portfolio/digital_twin.html#why-this-matters",
+    "href": "portfolio/digital_twin.html#why-this-matters",
+    "title": "Terminal Digital Twin",
+    "section": "Why This Matters",
+    "text": "Why This Matters\nThe value of a digital twin is not the technology — it is the reduction in cognitive load for the people making decisions under pressure. Every second a supervisor spends reconstructing the current state of the terminal is a second they are not spending on the decision that actually needs making.\nThis project is also a foundation. Once the terminal’s state is continuously legible in a structured form, it becomes the data substrate for everything else: ML model inputs, anomaly detection, capacity planning, and automation triggers.\n\nRole: Lead Developer — Python, Vue, Deck.gl, WebSockets, TOS Integration"
+  },
+  {
+    "objectID": "portfolio/point_in_time.html",
+    "href": "portfolio/point_in_time.html",
+    "title": "Point-in-Time Data Reconstruction",
+    "section": "",
+    "text": "Status: In Production / Anonymised"
+  },
+  {
+    "objectID": "portfolio/point_in_time.html#summary",
+    "href": "portfolio/point_in_time.html#summary",
+    "title": "Point-in-Time Data Reconstruction",
+    "section": "Summary",
+    "text": "Summary\nA CDC-based pipeline capturing every live mutation to critical TOS tables and streaming them to the cloud via Qlik — enabling full point-in-time reconstruction of any table’s state, down to the minute. The TOS’s only native option was periodic snapshots, leaving large gaps whenever retroactive analysis or incident investigation required knowing exactly what the data looked like during a specific operation."
+  },
+  {
+    "objectID": "portfolio/point_in_time.html#context-problem",
+    "href": "portfolio/point_in_time.html#context-problem",
+    "title": "Point-in-Time Data Reconstruction",
+    "section": "Context & Problem",
+    "text": "Context & Problem\nA container terminal’s TOS is a living database. Container positions, planning decisions, equipment assignments, and operational statuses are updated continuously — dozens of changes per minute across hundreds of tables during an active shift.\nFor analytical and audit purposes, knowing the current state of the TOS is rarely enough. The questions that matter most are historical: what did the yard plan look like at 14:30 when the vessel started discharging? What was the container’s recorded position at the moment the discrepancy was logged? What changed between shift handover and the incident?\nSQL Server’s native tooling offered one answer: scheduled snapshots. Take a copy of the table every hour, or every shift. In practice, this means any event that occurred between snapshots is invisible. For a terminal that processes thousands of container moves per shift, an hourly snapshot is not a history — it is a highlight reel with most frames missing."
+  },
+  {
+    "objectID": "portfolio/point_in_time.html#what-was-built",
+    "href": "portfolio/point_in_time.html#what-was-built",
+    "title": "Point-in-Time Data Reconstruction",
+    "section": "What Was Built",
+    "text": "What Was Built\n\n01 · CDC Capture via Qlik\nQlik’s Change Data Capture layer was configured to intercept every INSERT, UPDATE, and DELETE on the target TOS tables — capturing not just the new state but the before-image, the operation type, and a precise timestamp for each change.\n\n\n02 · Cloud Streaming Pipeline\nCaptured changes are streamed continuously to cloud storage, building an append-only log of every mutation. The log is partitioned and indexed to make point-in-time queries performant across months of history without full table scans.\n\n\n03 · Point-in-Time Reconstruction\nA query layer sits on top of the change log, allowing any table to be reconstructed as it existed at any arbitrary timestamp. This is exposed to analysts and ML pipelines as a simple interface: give me this table as it was at T."
+  },
+  {
+    "objectID": "portfolio/point_in_time.html#impact",
+    "href": "portfolio/point_in_time.html#impact",
+    "title": "Point-in-Time Data Reconstruction",
+    "section": "Impact",
+    "text": "Impact\n\nComplete, queryable change history — replacing snapshot gaps with a continuous record.\nIncident investigations that previously required guesswork — or were simply impossible — now have an authoritative answer. ML models can train on historically accurate feature states rather than the current snapshot at query time, eliminating a class of data leakage that is easy to miss and hard to quantify."
+  },
+  {
+    "objectID": "portfolio/point_in_time.html#why-this-matters",
+    "href": "portfolio/point_in_time.html#why-this-matters",
+    "title": "Point-in-Time Data Reconstruction",
+    "section": "Why This Matters",
+    "text": "Why This Matters\nSnapshot-based data pipelines create a subtle but serious problem for machine learning: the data used to train a model reflects what the database currently says happened, not what it said at the time the decision was made. In a TOS where records are corrected after the fact — which is routine — these two things are meaningfully different.\nPoint-in-time reconstruction eliminates that gap. It also turns every past incident into a fully replayable event, which is the foundation for robust model evaluation and operational post-mortems.\n\nRole: Lead Developer — Qlik, SQL Server CDC, Cloud Data Pipeline, Python"
+  },
+  {
+    "objectID": "portfolio/integration_layer.html#summary",
+    "href": "portfolio/integration_layer.html#summary",
+    "title": "Operational Integration Layer",
+    "section": "Summary",
+    "text": "Summary\nDesigned and built a production-grade integration layer connecting a large container terminal’s Terminal Operating System (TOS) to allow the execution of certain actions based on ML models — fundamentally changing how the terminal plans, monitors, and makes decisions at scale. This opened up a realm of possibilities to automate repetitive tasks so our workforce can focus on the complex operations instead of boilerplate actions."
+  },
+  {
+    "objectID": "portfolio/integration_layer.html#context-problem",
+    "href": "portfolio/integration_layer.html#context-problem",
+    "title": "Operational Integration Layer",
+    "section": "Context & Problem",
+    "text": "Context & Problem\nContainer terminal operations generate vast amounts of real-time data, yet traditional TOS environments are largely closed systems. Yard planning, equipment allocation, and operational reporting have historically relied on manual processes and fragmented tooling — creating bottlenecks that scale poorly with terminal throughput.\nWe wanted to solve this by using ML models to reduce the manual actions our workforce had to make, allowing them to focus on exception handling. However, the legacy TOS provided no such connectivity out of the box, and modifications to the TOS were not a viable option given the constraints we were facing.\nThere was a clear need for an integration layer that could bridge the operational core with the actions that the ML model predicted without making any changes to the TOS. We wanted the ability to roll-back to manual actions at any point if necessary."
+  },
+  {
+    "objectID": "portfolio/integration_layer.html#what-was-built",
+    "href": "portfolio/integration_layer.html#what-was-built",
+    "title": "Operational Integration Layer",
+    "section": "What Was Built",
+    "text": "What Was Built\n\n01 · TOS Integration\nExposed TOS actions through a structured API layer, enabling downstream systems to trigger automated operations within the TOS — without any modifications to the TOS itself.\n\n\n02 · ML Model Pipeline\nWired ML models directly into the operational data flow, targeting automated yard planning — a process previously dependent on expert manual intervention throughout the shift cycle.\n\n\n03 · Exception-First Workflow\nShifted the operational model from routine manual planning to exception handling — freeing workforce capacity for high-judgement decisions that genuinely require human expertise."
+  },
+  {
+    "objectID": "portfolio/integration_layer.html#impact",
+    "href": "portfolio/integration_layer.html#impact",
+    "title": "Operational Integration Layer",
+    "section": "Impact",
+    "text": "Impact\n\n~90% target reduction in manual yard planning effort.\nBy automating routine planning decisions, operational staff are repositioned toward exception handling and strategic oversight — a fundamental shift in how human expertise is applied at scale in one of Europe’s largest container terminals."
+  },
+  {
+    "objectID": "portfolio/integration_layer.html#why-this-matters",
+    "href": "portfolio/integration_layer.html#why-this-matters",
+    "title": "Operational Integration Layer",
+    "section": "Why This Matters",
+    "text": "Why This Matters\nThis project sits at the intersection of domain expertise and modern data engineering. The integration layer is not a standard analytics project — it required deep knowledge of terminal operations, data pipeline architecture, and an understanding of where automation genuinely adds value versus where human judgment remains irreplaceable.\nThe result is a system that makes the terminal’s existing workforce measurably more effective, rather than replacing the operational knowledge it runs on.\n\nRole: Lead Developer — Data Science, Python, API Design, ML Integration"
   }
 ]

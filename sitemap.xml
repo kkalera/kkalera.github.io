@@ -2,14 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kenneth-b.com/index.html</loc>
-    <lastmod>2026-04-14T09:04:34.757Z</lastmod>
-  </url>
-  <url>
-    <loc>https://kenneth-b.com/portfolio/integration_layer.html</loc>
-    <lastmod>2026-04-14T09:04:34.757Z</lastmod>
+    <lastmod>2026-04-27T19:20:31.938Z</lastmod>
   </url>
   <url>
     <loc>https://kenneth-b.com/portfolio/rl_crane.html</loc>
-    <lastmod>2026-04-14T09:04:34.758Z</lastmod>
+    <lastmod>2026-04-27T19:20:31.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kenneth-b.com/portfolio/discharge_prediction.html</loc>
+    <lastmod>2026-04-27T19:20:31.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kenneth-b.com/portfolio/digital_twin.html</loc>
+    <lastmod>2026-04-27T19:20:31.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kenneth-b.com/portfolio/point_in_time.html</loc>
+    <lastmod>2026-04-27T19:20:31.938Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kenneth-b.com/portfolio/integration_layer.html</loc>
+    <lastmod>2026-04-27T19:20:31.938Z</lastmod>
   </url>
 </urlset>
