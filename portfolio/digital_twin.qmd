@@ -6,7 +6,7 @@ image: ../img/digital_twin.png
 categories: [In Progress, Systems Integration, Data Visualisation, Anonymised]
 ---
 
-<!-- Replace ../img/digital_twin.png with an actual screenshot when available -->
+![](../img/digital_twin.png)
 
 ::: {.callout-note appearance="minimal"}
 **Status:** In Progress / Anonymised

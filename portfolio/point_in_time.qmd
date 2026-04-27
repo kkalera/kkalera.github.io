@@ -6,7 +6,7 @@ image: ../img/point_in_time.png
 categories: [Data Engineering, Systems Integration, Anonymised]
 ---
 
-<!-- Replace ../img/point_in_time.png with an actual screenshot when available -->
+![](../img/point_in_time.png)
 
 ::: {.callout-note appearance="minimal"}
 **Status:** In Production / Anonymised

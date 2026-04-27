@@ -6,7 +6,7 @@ image: ../img/discharge_prediction.png
 categories: [Machine Learning, Predictive Modelling, In Progress, Anonymised]
 ---
 
-<!-- Replace ../img/discharge_prediction.png with an actual screenshot when available -->
+![](../img/discharge_prediction.png)
 
 ::: {.callout-note appearance="minimal"}
 **Status:** In Progress / Anonymised
