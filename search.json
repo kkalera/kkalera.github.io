@@ -70,13 +70,6 @@
     "text": "Conclusion\nThe project succeeded in its core goal. The trained agent learned to place containers precisely against existing stacks on a vessel, actively control spreader swing, and consistently respect the safety rules around minimum safe lift heights — behaviours that take human operators months to internalise.\nThis convinced me that with sufficient compute and a well-designed environment, RL can realistically automate the majority of quay crane operations. The remaining gap lies not in the algorithm, but in simulation fidelity and resource investment.\nIt was this realisation — that the domain I knew best was on the cusp of a fundamental shift — that led me to enrol in the Turing College data science programme and pursue a full career transition into the field.\nFrom here, the most natural extension would be expanding the scope to include shipboard operations: hatch cover handling, container discharge sequencing, and lashing coordination — tasks that today still depend entirely on human judgment."
   },
   {
-    "objectID": "portfolio/discharge_prediction.html",
-    "href": "portfolio/discharge_prediction.html",
-    "title": "Predicted Container Discharge Time",
-    "section": "",
-    "text": "Status: In Progress / Anonymised"
-  },
-  {
     "objectID": "portfolio/discharge_prediction.html#summary",
     "href": "portfolio/discharge_prediction.html#summary",
     "title": "Predicted Container Discharge Time",
@@ -112,13 +105,6 @@
     "text": "Why This Matters\nThis project is a clean example of how predictive models create value not by replacing decisions, but by giving the people making decisions a better information environment. No trucker needed to change their incentives — they simply needed a signal they could trust.\nThe 84% accuracy figure is also a floor, not a ceiling. As the model ingests more operational history and the stowage data pipeline matures, that number improves. The architecture was built to retrain continuously as new discharge data arrives.\n\nRole: Lead Developer — Python, Scikit-Learn, XGBoost, TOS Data Pipeline"
   },
   {
-    "objectID": "portfolio/digital_twin.html",
-    "href": "portfolio/digital_twin.html",
-    "title": "Terminal Digital Twin",
-    "section": "",
-    "text": "Status: In Progress / Anonymised"
-  },
-  {
     "objectID": "portfolio/digital_twin.html#summary",
     "href": "portfolio/digital_twin.html#summary",
     "title": "Terminal Digital Twin",
@@ -152,13 +138,6 @@
     "title": "Terminal Digital Twin",
     "section": "Why This Matters",
     "text": "Why This Matters\nThe value of a digital twin is not the technology — it is the reduction in cognitive load for the people making decisions under pressure. Every second a supervisor spends reconstructing the current state of the terminal is a second they are not spending on the decision that actually needs making.\nThis project is also a foundation. Once the terminal’s state is continuously legible in a structured form, it becomes the data substrate for everything else: ML model inputs, anomaly detection, capacity planning, and automation triggers.\n\nRole: Lead Developer — Python, Vue, Deck.gl, WebSockets, TOS Integration"
-  },
-  {
-    "objectID": "portfolio/point_in_time.html",
-    "href": "portfolio/point_in_time.html",
-    "title": "Point-in-Time Data Reconstruction",
-    "section": "",
-    "text": "Status: In Production / Anonymised"
   },
   {
     "objectID": "portfolio/point_in_time.html#summary",
