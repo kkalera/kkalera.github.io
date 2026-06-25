@@ -44,6 +44,31 @@ execute:
   v(0.5em)
 }
 
+#let case(title, meta, result, desc, tech) = {
+  grid(
+    columns: (1fr, auto),
+    text(weight: "bold", title),
+    text(fill: light, size: 8.5pt, meta)
+  )
+  v(0.12em)
+  text(weight: "bold", fill: accent, result)
+  v(0.12em)
+  text(size: 9.5pt, desc)
+  v(0.12em)
+  text(size: 8.5pt, fill: light, tech)
+  v(0.65em)
+}
+
+#let service(name, desc) = {
+  grid(
+    columns: (4.2cm, 1fr),
+    gutter: 0.6em,
+    text(weight: "bold", size: 9.5pt, fill: accent, name),
+    text(size: 9.5pt, desc)
+  )
+  v(0.3em)
+}
+
 #let edu-item(degree, org, period, desc) = {
   grid(
     columns: (1fr, auto),
@@ -70,12 +95,14 @@ execute:
 #align(center)[
   #text(size: 22pt, weight: "bold", fill: accent)[Kenneth Breugelmans]
   #v(0.2em)
-  #text(size: 11pt, fill: muted)[Data Scientist · MSC PSA European Terminal · Antwerp, Belgium]
+  #text(size: 11pt, fill: muted)[Freelance Data Scientist & ML Engineer · Maritime & Terminal Operations · Antwerp, Belgium]
+  #v(0.2em)
+  #text(size: 9.5pt, fill: accent, weight: "bold")[Available for freelance engagements from September 2026]
   #v(0.25em)
   #text(size: 9pt, fill: light)[
-    #link("mailto:kennethbreugelmans@gmail.com")[kennethbreugelmans\@gmail.com]
+    #link("mailto:kenneth@kaimera.dev")[kenneth\@kaimera.dev]
     #h(1em) · #h(1em)
-    #link("https://kenneth-b.com")[https://kenneth-b.com]
+    #link("https://kaimera.dev")[https://kaimera.dev]
     #h(1em) · #h(1em)
     #link("https://kkalera.github.io")[kkalera.github.io]
     #h(1em) · #h(1em)
@@ -90,11 +117,80 @@ execute:
 // ── PROFILE ──────────────────────────────────────────────────────────────────
 #section-title("Profile")
 
-I've spent years on the floor of one of Europe's busiest container terminals — operating quay cranes, driving straddle carriers, managing live cargo flows. I became a data scientist because I saw what better information could do for operations that still run largely on instinct and experience.
+I'm a freelance data scientist who spent a decade on the floor of one of Europe's busiest container terminals before I ever touched a model — operating quay cranes, driving straddle carriers, managing live cargo flows. I build the data and ML systems that maritime and terminal operations actually need, from someone who has run those operations himself.
 
-Today I work at the intersection of heavy industry and modern data engineering: building integration layers for legacy terminal operating systems, designing digital twins that make real-time operations legible, and implementing reinforcement learning models for container optimisation. I don't do mystery — you'll know what I'm building, why, and where it stands.
+I work at the intersection of heavy industry and modern data engineering: integration layers for legacy terminal operating systems, predictive models for live vessel operations, real-time digital twins, and reinforcement learning for container optimisation. I don't do mystery — you'll know what I'm building, why, and where it stands. I ask the uncomfortable questions early, so they don't become expensive problems later. If you need someone who understands your operations before touching your data, we'll get along well.
 
-#v(1em)
+#v(0.8em)
+// ── DOMAIN EXPERTISE ─────────────────────────────────────────────────────────
+#section-title("Domain Expertise — My Edge")
+
+Over a decade of hands-on experience across the full operational hierarchy of a large container terminal — dockworker, straddle carrier driver, ship-to-shore crane operator. I understand the workflows, physical constraints, and failure modes that never appear in a manual: berth planning, yard density management, equipment choreography under vessel deadlines, and the human factors that decide whether a shift runs smoothly. For a data project that means I can tell the difference between a number that looks right and one that is operationally true — and I won't burn a client's budget modelling the wrong problem.
+
+#v(0.8em)
+// ── SERVICES ─────────────────────────────────────────────────────────────────
+#section-title("Services & Capabilities")
+
+#service("Operational ML & Forecasting", "Predictive models for live operations — discharge timing, yard planning, equipment allocation, and throughput.")
+#service("Systems Integration", "Integration layers connecting legacy TOS, SCADA and industrial systems to modern ML pipelines — without modifying the core system.")
+#service("Real-Time Digital Twins", "Live dashboards and digital twins that make terminal state legible in a single, coherent view.")
+#service("Data Engineering", "CDC pipelines, point-in-time data reconstruction, cloud streaming, and analytics-ready data foundations.")
+#service("RL & Simulation", "Reinforcement learning and custom simulation environments for control and optimisation problems.")
+#service("Advisory", "Feasibility, architecture, and \"should we even build this\" reviews for operations-meets-data initiatives.")
+
+#v(0.8em)
+// ── SELECTED WORK ────────────────────────────────────────────────────────────
+#section-title("Selected Work")
+
+#text(size: 9pt, fill: muted, style: "italic")[Detailed write-ups at #link("https://kenneth-b.com")[kenneth-b.com]. Project details anonymised where required.]
+#v(0.6em)
+
+#case(
+  "Predicted Discharge Time",
+  "MPET · Production",
+  "84% of predictions land within one hour of actual discharge.",
+  "Predicts when each container becomes reachable during live vessel operations, so hauliers can plan pickup hours ahead instead of waiting for the ship to depart.",
+  "Python · gradient boosting · live TOS features"
+)
+#case(
+  "Operational Integration Layer",
+  "MPET · Production",
+  "~90% target reduction in manual yard-planning effort.",
+  "Bridges a legacy TOS to ML pipelines through an API, so model-driven decisions run automatically with full roll-back to manual — moving planners from routine work to exception handling.",
+  "Python · C# · REST APIs · event-driven"
+)
+#case(
+  "Point-in-Time Data Reconstruction",
+  "MPET · Production",
+  "Queryable, second-level history of every critical TOS table.",
+  "A CDC pipeline streams every change in critical TOS tables to the cloud, replacing periodic snapshots with a complete audit trail exact to the second.",
+  "Change Data Capture · Qlik · cloud streaming · SQL"
+)
+#case(
+  "Terminal Digital Twin",
+  "MPET · Proof of Concept",
+  "One live view of terminal state, replacing scattered screens and radio calls.",
+  "Ingests TOS and equipment data to render yard occupancy, vessel positions and crane movements as they happen — a single coherent picture for planners and shift supervisors.",
+  "Real-time ingestion · web · Deck.gl"
+)
+#case(
+  "RL Quay Crane",
+  "Personal R&D · 2021",
+  "Showed an RL agent can handle ~95% of quay-crane tasks.",
+  "A custom Unity3D simulator and ML-Agents environment testing whether reinforcement learning can replicate quay-crane operator behaviour.",
+  "Unity3D · ML-Agents · PPO · SAC"
+)
+
+#v(0.8em)
+// ── ENGAGEMENT & RATES ───────────────────────────────────────────────────────
+#section-title("Engagement & Rates")
+
+#skill-row("Day rate", "€700 – 800 / day, depending on engagement scope and duration.")
+#skill-row("Availability", "Open to new freelance engagements from September 2026.")
+#skill-row("Working mode", "Remote, or on-site in the Antwerp / Port of Antwerp area.")
+#skill-row("Engagement", "Project-based or retained — from short advisory sprints to multi-month builds.")
+
+#pagebreak()
 // ── EXPERIENCE ───────────────────────────────────────────────────────────────
 #section-title("Experience")
 
@@ -102,46 +198,37 @@ Today I work at the intersection of heavy industry and modern data engineering: 
   "Data Scientist",
   "MSC PSA European Terminal (MPET) · Antwerp",
   "Jul 2024 – Present",
-  "Building ML pipelines and RL models for container optimisation. Designed and implemented a production-grade integration layer connecting the terminal's legacy TOS to ML-driven decision pipelines — enabling automated operational actions without modifying the core system. Building a real-time digital twin for operational decision-making and monitoring."
+  "Building ML pipelines and RL models for container optimisation, a production integration layer connecting the legacy TOS to ML-driven decision pipelines, and a real-time digital twin for operational decision-making. The work behind the case studies above."
 )
-#v(1em)
+#v(0.6em)
 #job(
-  "Ship-to-Shore Crane Operator",
-  "MSC PSA European Terminal (MPET) · Antwerp",
-  "Aug 2019 – Jul 2024",
-  "Operated single and dual hoist cranes on some of the world's largest container vessels. Collaborated with technical teams on complex software and hardware troubleshooting. Completed a full-time Data Science programme (Turing College) in parallel with this role."
+  "Terminal Operations — Crane Operator · Straddle Carrier · Dockworker",
+  "MSC PSA European Terminal (MPET) & CEPA · Antwerp",
+  "2015 – 2024",
+  "Nearly a decade across the full operational hierarchy of one of Europe's busiest container terminals — operating single and dual-hoist ship-to-shore cranes on the world's largest vessels, driving straddle carriers across complex yard layouts, and working the docks on discharge coordination and twistlock troubleshooting. Completed a full-time Data Science programme in parallel. This is the ground-truth domain knowledge my data work is built on."
 )
-#v(1em)
+#v(0.6em)
 #job(
-  "Straddle Carrier Operator",
-  "MSC PSA European Terminal (MPET) · Antwerp",
-  "Aug 2017 – Aug 2019",
-  "Container transport and yard logistics across complex terminal layouts. Responsible for equipment reliability checks and coordination with maintenance teams."
-)
-#v(1em)
-#job(
-  "Dock Worker",
-  "CEPA · Antwerp",
-  "Sep 2015 – Jul 2024",
-  "Container preparation, discharge coordination, and crane guidance under limited visibility conditions. Specialised in twistlock troubleshooting and live operational problem-solving."
-)
-#pagebreak()
-#job(
-  "Production Operator",
-  "Xtraflex · Lier",
-  "Mar 2013 – Sep 2015",
-  "Custom Teflon hose fabrication to tight tolerances. Managed the Trax racing store — building bespoke brake lines for classic cars, rally cars, and racing motorcycles."
+  "Earlier — Production & Manufacturing",
+  "Xtraflex · Lier  /  Atlas Copco Airpower · Antwerp",
+  "2010 – 2015",
+  "Custom Teflon hose fabrication to tight tolerances and management of a racing-parts store; installation of custom electrical modules into industrial compressors to client specification."
 )
 
-#v(1em)
-#job(
-  "Operator (seasonal)",
-  "Atlas Copco Airpower · Antwerp",
-  "Summers 2010 & 2011",
-  "Installation of custom electrical modules into industrial compressors according to client specifications."
-)
+#v(0.8em)
+// ── SKILLS ───────────────────────────────────────────────────────────────────
+#section-title("Technical Skills")
 
-#v(1em)
+#skill-row("Languages", "Python · SQL · JavaScript · C# · Java · Kotlin · Mojo · GCODE")
+#skill-row("Data & Pipelines", "Pandas · Polars · DuckDB · Dask · NumPy · Scikit-Learn · OpenCV · CDC / Qlik")
+#skill-row("ML & Modelling", "XGBoost · LightGBM · CatBoost · FastAI · PyTorch · Lightning AI · Optuna · SHAP")
+#skill-row("RL & Simulation", "Unity3D · ML-Agents · PPO · SAC")
+#skill-row("Visualisation", "Matplotlib · Plotly · Seaborn · Folium · Tableau · Power BI · Deck.gl")
+#skill-row("Web & Publishing", "Flask · Streamlit · Vue · HTML/Bootstrap · Quarto")
+#skill-row("Cloud", "Microsoft Azure · Google Cloud · Amazon AWS")
+#skill-row("CAD / Engineering", "Autodesk Fusion 360 · Autodesk Inventor · Onshape · SketchUp")
+
+#v(0.8em)
 // ── EDUCATION ────────────────────────────────────────────────────────────────
 #section-title("Education")
 
@@ -152,70 +239,12 @@ Today I work at the intersection of heavy industry and modern data engineering: 
   "Intensive programme covering machine learning, data engineering, deep learning, and applied statistics. Completed while working full-time as a crane operator on rotating shift patterns."
 )
 
-#v(1em)
-// ── SKILLS ───────────────────────────────────────────────────────────────────
-#section-title("Technical Skills")
-
-#skill-row("Languages", "Python · SQL · JavaScript · C# · Java · Kotlin · Mojo · GCODE")
-#skill-row("Data & Pipelines", "Pandas · Polars · DuckDB · Dask · NumPy · Scikit-Learn · OpenCV")
-#skill-row("ML & Modelling", "XGBoost · LightGBM · CatBoost · FastAI · PyTorch · Lightning AI · Optuna · SHAP")
-#skill-row("RL & Simulation", "Unity3D · ML-Agents · PPO · SAC")
-#skill-row("Visualisation", "Matplotlib · Plotly · Seaborn · Folium · Tableau · Power BI · Deck.gl")
-#skill-row("Web & Publishing", "Flask · Streamlit · Vue · HTML/Bootstrap · Quarto")
-#skill-row("Cloud", "Microsoft Azure · Google Cloud · Amazon AWS")
-#skill-row("CAD / Engineering", "Autodesk Fusion 360 · Autodesk Inventor · Onshape · SketchUp")
-
-#v(1em)
-// ── PROJECTS ─────────────────────────────────────────────────────────────────
-#section-title("Selected Projects")
-
-#job(
-  "Point-in-Time Data Reconstruction",
-  "MSC PSA European Terminal (MPET) — Production",
-  "2024 – Present",
-  "CDC-based pipeline capturing every live mutation to critical TOS tables and streaming them to the cloud via Qlik — enabling full point-in-time reconstruction of any table's state, down to the second. The TOS's only native option was periodic snapshots, leaving large gaps whenever retroactive analysis or incident investigation required knowing exactly what the data looked like during a specific operation. The pipeline replaced that blind spot with a complete, queryable change history that persists indefinitely."
-)
-#v(1em)
-#job(
-  "Predicted Discharge Time",
-  "MSC PSA European Terminal (MPET) — Production",
-  "2024 – Present",
-  "Predictive model estimating container discharge time during active vessel operations. Truckers historically waited until a ship had fully departed before planning pickup — with no reliable signal on when individual containers would be accessible. The model gives a discharge window hours in advance, letting hauliers plan their arrival before the quay clears. Achieved 84% of predictions within one hour of actual discharge time."
-)
-#v(1em)
-#job(
-  "Digital Twin - Proof of Concept",
-  "MSC PSA European Terminal (MPET) — Production",
-  "2024 – Present",
-  "Web-based real-time digital twin of the terminal's live operational state — ingesting data from the TOS and equipment systems to render yard occupancy, vessel positions, crane assignments, and equipment movements as they happen. Giving planners and shift supervisors a single coherent view of what is actually happening on the terminal, replacing the patchwork of screens and radio calls that operational awareness previously depended on."
-)
-#v(1em)
-#job(
-  "Operational Integration Layer",
-  "MSC PSA European Terminal (MPET) — Production",
-  "2024 – Present",
-  "Production-grade integration layer bridging a legacy TOS with ML model pipelines. Enables automated operational decisions at scale with full roll-back capability. Built with Python, C#, REST APIs, and event-driven architecture."
-)
-#v(1em)
-#job(
-  "RL Quay Crane",
-  "Personal R&D — Proof of Concept",
-  "2021",
-  "Custom Unity3D simulator and RL training environment to explore whether a reinforcement learning agent could replicate quay crane operator behaviour. Trained agents using PPO and SAC via ML-Agents. Concluded that RL can handle ~95% of crane tasks given sufficient compute and training time."
-)
-
-#v(1em)
-// ── DOMAIN KNOWLEDGE ─────────────────────────────────────────────────────────
-#section-title("Domain Knowledge")
-
-Over a decade of hands-on experience across the full operational hierarchy of a large container terminal — from dockworker to straddle carrier driver to quay crane operator. Deep understanding of the workflows, physical constraints, and failure modes that do not appear in any manual: berth planning, yard density management, equipment choreography under vessel deadlines, and the human factors that determine whether a shift runs smoothly or doesn't.
-
-#v(1em)
+#v(0.8em)
 // ── LANGUAGES ────────────────────────────────────────────────────────────────
 #section-title("Languages")
 
 #skill-row("Dutch", "Native")
-#skill-row("English", "Professional proficiency (duolingo certified 130/160)")
+#skill-row("English", "Professional proficiency (Duolingo certified 130/160)")
 #skill-row("French", "Basic")
 
 ```
