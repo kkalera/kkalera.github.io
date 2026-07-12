@@ -28,7 +28,7 @@ const DETAILS: Record<
 > = {
   "digital-twin": {
     youWill: [
-      "Scrub a full shift on a timeline and watch vessels berth, cranes work and straddle carriers move.",
+      "Watch a full shift play out live — vessels berth, cranes work and straddle carriers move.",
       "Toggle layers — containers by carrier or size, cranes, equipment, vessels.",
       "Click any vessel or container to inspect its live state.",
     ],
@@ -61,31 +61,24 @@ const detail = DETAILS[project.slug];
       >← All demos</a
     >
 
-    <header class="mt-8 mb-10">
+    <header class="mt-8">
       <p class="kicker mb-3" style="color:var(--accent)">{project.kicker}</p>
       <h1
         class="text-4xl font-extrabold tracking-tight text-[var(--color-ink)] sm:text-5xl"
       >
         {project.title}
       </h1>
-      <p class="mt-5 max-w-3xl text-lg leading-relaxed text-[var(--color-muted)]">
-        {project.summary}
-      </p>
-      <div class="mt-6 flex flex-wrap gap-1.5">
-        {
-          project.stack.map((tech) => (
-            <span class="rounded-md bg-[var(--color-surface-2)] px-2.5 py-1 font-mono text-xs text-[var(--color-faint)]">
-              {tech}
-            </span>
-          ))
-        }
-      </div>
     </header>
 
     <!-- Interactive canvas — the React island mounts here per demo -->
+    <div class="mt-8">
     {
       project.slug === "digital-twin" ? (
-        <DigitalTwin client:only="react" />
+        <div class="mx-[calc(50%-50vw)] flex justify-center px-4 sm:px-6">
+          <div class="w-full max-w-[1600px]">
+            <DigitalTwin client:only="react" />
+          </div>
+        </div>
       ) : project.slug === "integration-layer" ? (
         <IntegrationLayer client:only="react" />
       ) : (
@@ -106,6 +99,23 @@ const detail = DETAILS[project.slug];
         </div>
       )
     }
+    </div>
+
+    <!-- Summary + tech stack — below the demo -->
+    <div class="mt-10 max-w-3xl">
+      <p class="text-lg leading-relaxed text-[var(--color-muted)]">
+        {project.summary}
+      </p>
+      <div class="mt-6 flex flex-wrap gap-1.5">
+        {
+          project.stack.map((tech) => (
+            <span class="rounded-md bg-[var(--color-surface-2)] px-2.5 py-1 font-mono text-xs text-[var(--color-faint)]">
+              {tech}
+            </span>
+          ))
+        }
+      </div>
+    </div>
 
     <!-- What you'll be able to do -->
     <section class="mt-14 grid gap-10 md:grid-cols-2">
