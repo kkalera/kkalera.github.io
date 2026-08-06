@@ -11,3 +11,6 @@ npm-debug.log*
 .DS_Store
 .env
 .env.production
+
+# Typst (auto-downloaded CV compiler)
+cv/.bin/

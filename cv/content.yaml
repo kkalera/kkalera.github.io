@@ -1,0 +1,202 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CV content. Design lives in cv.typ — this file is only what the CV says.
+# Structured so the Astro site can read the same data for a /cv page later.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Kenneth Breugelmans
+role: Freelance Data Scientist & ML Engineer
+discipline: Maritime & Terminal Operations
+location: Antwerp, Belgium
+availability: Available for freelance engagements from September 2026
+
+contact:
+  - label: Email
+    text: kenneth@kaimera.dev
+    url: mailto:kenneth@kaimera.dev
+  - label: Site
+    text: kaimera.dev
+    url: https://kaimera.dev
+  - label: Work
+    text: kenneth-b.com
+    url: https://kenneth-b.com
+  - label: LinkedIn
+    text: kenneth-breugelmans
+    url: https://www.linkedin.com/in/kenneth-breugelmans
+
+profile:
+  lead: >-
+    I'm a freelance data scientist who spent a decade on the floor of one of Europe's
+    busiest container terminals before I ever touched a model — operating quay cranes,
+    driving straddle carriers, managing live cargo flows. I build the data and ML systems
+    that maritime and terminal operations actually need, from someone who has run those
+    operations himself.
+  body: >-
+    I work at the intersection of heavy industry and modern data engineering: integration
+    layers for legacy terminal operating systems, predictive models for live vessel
+    operations, real-time digital twins, and reinforcement learning for container
+    optimisation. I don't do mystery — you'll know what I'm building, why, and where it
+    stands. I ask the uncomfortable questions early, so they don't become expensive
+    problems later. If you need someone who understands your operations before touching
+    your data, we'll get along well.
+
+edge:
+  label: The Edge
+  body: >-
+    Over a decade of hands-on experience across the full operational hierarchy of a large
+    container terminal — dockworker, straddle carrier driver, ship-to-shore crane operator.
+    I understand the workflows, physical constraints, and failure modes that never appear
+    in a manual: berth planning, yard density management, equipment choreography under
+    vessel deadlines, and the human factors that decide whether a shift runs smoothly. For
+    a data project that means I can tell the difference between a number that looks right
+    and one that is operationally true — and I won't burn a client's budget modelling the
+    wrong problem.
+
+services:
+  - name: Operational ML & Forecasting
+    desc: Predictive models for live operations — discharge timing, yard planning, equipment allocation, and throughput.
+  - name: Systems Integration
+    desc: Integration layers connecting legacy TOS, SCADA and industrial systems to modern ML pipelines — without modifying the core system.
+  - name: Real-Time Digital Twins
+    desc: Live dashboards and digital twins that make terminal state legible in a single, coherent view.
+  - name: Data Engineering
+    desc: CDC pipelines, point-in-time data reconstruction, cloud streaming, and analytics-ready data foundations.
+  - name: RL & Simulation
+    desc: Reinforcement learning and custom simulation environments for control and optimisation problems.
+  - name: Advisory
+    desc: Feasibility, architecture, and "should we even build this" reviews for operations-meets-data initiatives.
+
+work:
+  note: Detailed write-ups at kenneth-b.com. Project details anonymised where required.
+  items:
+    - title: Predicted Discharge Time
+      client: MPET
+      status: Production
+      # stat/meter are optional — omit both for a purely qualitative result.
+      stat: 84%
+      meter: 0.84
+      result: of predictions land within one hour of actual discharge.
+      desc: >-
+        Predicts when each container becomes reachable during live vessel operations, so
+        hauliers can plan pickup hours ahead instead of waiting for the ship to depart.
+      tech: Python · gradient boosting · live TOS features
+
+    - title: Operational Integration Layer
+      client: MPET
+      status: Production
+      stat: ~90%
+      meter: 0.90
+      result: target reduction in manual yard-planning effort.
+      desc: >-
+        Bridges a legacy TOS to ML pipelines through an API, so model-driven decisions run
+        automatically with full roll-back to manual — moving planners from routine work to
+        exception handling.
+      tech: Python · C# · REST APIs · event-driven
+
+    - title: Point-in-Time Data Reconstruction
+      client: MPET
+      status: Production
+      stat: 1 s
+      result: resolution on a queryable history of every critical TOS table.
+      desc: >-
+        A CDC pipeline streams every change in critical TOS tables to the cloud, replacing
+        periodic snapshots with a complete audit trail exact to the second.
+      tech: Change Data Capture · Qlik · cloud streaming · SQL
+
+    - title: Terminal Digital Twin
+      client: MPET
+      status: Proof of Concept
+      result: One live view of terminal state, replacing scattered screens and radio calls.
+      desc: >-
+        Ingests TOS and equipment data to render yard occupancy, vessel positions and crane
+        movements as they happen — a single coherent picture for planners and shift
+        supervisors.
+      tech: Real-time ingestion · web · Deck.gl
+
+    - title: RL Quay Crane
+      client: Personal R&D
+      status: "2021"
+      stat: ~95%
+      meter: 0.95
+      result: of quay-crane tasks handled by a reinforcement learning agent.
+      desc: >-
+        A custom Unity3D simulator and ML-Agents environment testing whether reinforcement
+        learning can replicate quay-crane operator behaviour.
+      tech: Unity3D · ML-Agents · PPO · SAC
+
+engagement:
+  - label: Day rate
+    value: €700 – 800 / day, depending on engagement scope and duration.
+  - label: Availability
+    value: Open to new freelance engagements from September 2026.
+  - label: Working mode
+    value: Remote, or on-site in the Antwerp / Port of Antwerp area.
+  - label: Engagement
+    value: Project-based or retained — from short advisory sprints to multi-month builds.
+
+experience:
+  - role: Data Scientist
+    org: MSC PSA European Terminal (MPET)
+    place: Antwerp
+    period: Jul 2024 – Present
+    desc: >-
+      Building ML pipelines and RL models for container optimisation, a production
+      integration layer connecting the legacy TOS to ML-driven decision pipelines, and a
+      real-time digital twin for operational decision-making. The work behind the case
+      studies above.
+
+  - role: Terminal Operations — Crane Operator · Straddle Carrier · Dockworker
+    org: MSC PSA European Terminal (MPET) & CEPA
+    place: Antwerp
+    period: 2015 – 2024
+    desc: >-
+      Nearly a decade across the full operational hierarchy of one of Europe's busiest
+      container terminals — operating single and dual-hoist ship-to-shore cranes on the
+      world's largest vessels, driving straddle carriers across complex yard layouts, and
+      working the docks on discharge coordination and twistlock troubleshooting. Completed
+      a full-time Data Science programme in parallel. This is the ground-truth domain
+      knowledge my data work is built on.
+
+  - role: Earlier — Production & Manufacturing
+    org: Xtraflex · Lier / Atlas Copco Airpower
+    place: Antwerp
+    period: 2010 – 2015
+    desc: >-
+      Custom Teflon hose fabrication to tight tolerances and management of a racing-parts
+      store; installation of custom electrical modules into industrial compressors to client
+      specification.
+
+skills:
+  - category: Languages
+    items: Python · SQL · JavaScript · C# · Java · Kotlin · Mojo · GCODE
+  - category: Data & Pipelines
+    items: Pandas · Polars · DuckDB · Dask · NumPy · Scikit-Learn · OpenCV · CDC / Qlik
+  - category: ML & Modelling
+    items: XGBoost · LightGBM · CatBoost · FastAI · PyTorch · Lightning AI · Optuna · SHAP
+  - category: RL & Simulation
+    items: Unity3D · ML-Agents · PPO · SAC
+  - category: Visualisation
+    items: Matplotlib · Plotly · Seaborn · Folium · Tableau · Power BI · Deck.gl
+  - category: Web & Publishing
+    items: Flask · Streamlit · Vue · Astro · HTML/Bootstrap · Quarto
+  - category: Cloud
+    items: Microsoft Azure · Google Cloud · Amazon AWS
+  - category: CAD / Engineering
+    items: Autodesk Fusion 360 · Autodesk Inventor · Onshape · SketchUp
+
+education:
+  - degree: Data Science — Professional Programme
+    org: Turing College
+    place: Online
+    period: May 2023 – Sep 2024
+    desc: >-
+      Intensive programme covering machine learning, data engineering, deep learning, and
+      applied statistics. Completed while working full-time as a crane operator on rotating
+      shift patterns.
+
+languages:
+  - name: Dutch
+    level: Native
+  - name: English
+    level: Professional proficiency (Duolingo certified 130/160)
+  - name: French
+    level: Basic

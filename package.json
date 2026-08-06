@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "cv": "bash scripts/build-cv.sh",
+    "cv:watch": "bash scripts/build-cv.sh watch",
     "gen": "node scripts/gen_demo_data/digital-twin.mjs",
     "predev": "npm run gen",
     "prebuild": "npm run gen",
