@@ -1,7 +1,25 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# CV content. Design lives in cv.typ — this file is only what the CV says.
+# CV content (English). Design lives in cv.typ — this file is only what the CV
+# says. content.nl.yaml is the Dutch counterpart; keep the two in step.
 # Structured so the Astro site can read the same data for a /cv page later.
 # ─────────────────────────────────────────────────────────────────────────────
+
+lang: en
+
+# Section headings, so the template carries no language of its own.
+labels:
+  doctitle: Curriculum Vitae
+  status: Status
+  profile: Profile
+  services: Services
+  work: Selected Work
+  engagement: Engagement
+  skills: Technical Skills
+  experience: Experience
+  education: Education
+  languages: Languages
+
+keywords: [CV, data science, machine learning, maritime, terminal operations]
 
 name: Kenneth Breugelmans
 role: Freelance Data Scientist & ML Engineer
@@ -112,7 +130,17 @@ work:
         supervisors.
       tech: Real-time ingestion · web · Deck.gl
 
-    - title: RL Quay Crane
+    - title: Spreader Detection from Synthetic Data
+      client: Personal R&D
+      status: Ongoing
+      result: Spreader position and pose from vision alone, trained entirely on synthetic imagery.
+      desc: >-
+        A purpose-built Unity3D environment renders labelled camera imagery of a crane
+        spreader; YOLOv11 detection and segmentation models train on it — the perception
+        layer that automated crane control depends on and that encoder data cannot provide.
+      tech: Unity3D · YOLOv11 · PyTorch · synthetic data
+
+    - title: RL Quay Crane & Spreader Skew Control
       client: Personal R&D
       status: "2021"
       stat: ~95%
@@ -120,12 +148,13 @@ work:
       result: of quay-crane tasks handled by a reinforcement learning agent.
       desc: >-
         A custom Unity3D simulator and ML-Agents environment testing whether reinforcement
-        learning can replicate quay-crane operator behaviour.
+        learning can replicate quay-crane operator behaviour — including a skew controller
+        that cut spreader settle time from 27 s to 6 s.
       tech: Unity3D · ML-Agents · PPO · SAC
 
 engagement:
   - label: Day rate
-    value: €700 – 800 / day, depending on engagement scope and duration.
+    value: €720 / day.
   - label: Availability
     value: Open to new freelance engagements from September 2026.
   - label: Working mode
@@ -171,7 +200,7 @@ skills:
   - category: Data & Pipelines
     items: Pandas · Polars · DuckDB · Dask · NumPy · Scikit-Learn · OpenCV · CDC / Qlik
   - category: ML & Modelling
-    items: XGBoost · LightGBM · CatBoost · FastAI · PyTorch · Lightning AI · Optuna · SHAP
+    items: XGBoost · LightGBM · CatBoost · FastAI · PyTorch · Lightning AI · Optuna · SHAP · YOLOv11
   - category: RL & Simulation
     items: Unity3D · ML-Agents · PPO · SAC
   - category: Visualisation

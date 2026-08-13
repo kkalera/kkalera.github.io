@@ -1,0 +1,235 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CV-inhoud (Nederlands). De vormgeving zit in cv.typ — dit bestand is enkel
+# wat het cv zegt. content.yaml is de Engelse tegenhanger; houd beide gelijk.
+# ─────────────────────────────────────────────────────────────────────────────
+
+lang: nl
+
+# Nederlands zet ~10% langer dan het Engels; een iets bredere zetbreedte houdt
+# het cv op twee pagina's. De rest van de vormgeving is identiek.
+layout:
+  margin_x: 1.8
+
+# Sectietitels, zodat de template zelf taalneutraal blijft.
+labels:
+  doctitle: Curriculum Vitae
+  status: Status
+  profile: Profiel
+  services: Diensten
+  work: Realisaties
+  engagement: Afspraken
+  skills: Technische Skills
+  experience: Ervaring
+  education: Opleiding
+  languages: Talen
+
+keywords: [CV, data science, machine learning, maritiem, terminaloperaties]
+
+name: Kenneth Breugelmans
+role: Freelance Data Scientist & ML-Engineer
+discipline: Maritiem & Terminaloperaties
+location: Antwerpen, België
+availability: Beschikbaar voor freelance opdrachten vanaf september 2026
+
+contact:
+  - label: E-mail
+    text: kenneth@kaimera.dev
+    url: mailto:kenneth@kaimera.dev
+  - label: Site
+    text: kaimera.dev
+    url: https://kaimera.dev
+  - label: Werk
+    text: kenneth-b.com
+    url: https://kenneth-b.com
+  - label: LinkedIn
+    text: kenneth-breugelmans
+    url: https://www.linkedin.com/in/kenneth-breugelmans
+
+profile:
+  lead: >-
+    Ik ben een freelance data scientist die tien jaar op de vloer van een van Europa's
+    drukste containerterminals stond voor ik ooit een model aanraakte — kaaikranen
+    bedienen, straddle carriers rijden, live ladingstromen beheren. Ik bouw de data- en
+    ML-systemen die de maritieme en terminalwereld echt nodig heeft, vanuit iemand die die
+    operatie zelf gedraaid heeft.
+  body: >-
+    Ik werk op het snijvlak van zware industrie en moderne data-engineering: integratielagen
+    voor legacy terminal operating systems, voorspellende modellen voor live
+    scheepsoperaties, real-time digital twins en reinforcement learning voor
+    containeroptimalisatie. Ik doe niet aan mysterie — je weet wat ik bouw, waarom, en waar
+    het staat. Ik stel de ongemakkelijke vragen vroeg, zodat ze later geen dure problemen
+    worden. Zoek je iemand die je operatie begrijpt vóór hij je data aanraakt, dan komen we
+    goed overeen.
+
+edge:
+  label: Het Verschil
+  body: >-
+    Meer dan tien jaar hands-on ervaring over de volledige operationele hiërarchie van een
+    grote containerterminal — havenarbeider, straddle carrier-chauffeur, ship-to-shore
+    kraanbestuurder. Ik ken de workflows, de fysieke beperkingen en de faalmodi die in geen
+    enkele handleiding staan: ligplaatsplanning, yarddensiteit, het choreograferen van
+    machines onder de druk van een vaarschema, en de menselijke factoren die bepalen of een
+    ploeg vlot draait. Voor een dataproject betekent dat dat ik het verschil zie tussen een
+    cijfer dat juist lijkt en een cijfer dat operationeel klopt — en dat ik het budget van
+    een klant niet opbrand aan het verkeerde probleem.
+
+services:
+  - name: Operationele ML & Forecasting
+    desc: Voorspellende modellen voor de live operatie — lostijden, yardplanning, machinetoewijzing en throughput.
+  - name: Systeemintegratie
+    desc: Integratielagen die legacy TOS, SCADA en industriële systemen koppelen aan moderne ML-pipelines — zonder het kernsysteem aan te passen.
+  - name: Real-Time Digital Twins
+    desc: Live dashboards en digital twins die de staat van de terminal leesbaar maken in één samenhangend beeld.
+  - name: Data-engineering
+    desc: CDC-pipelines, point-in-time reconstructie van data, cloud streaming en analyseklare datafundamenten.
+  - name: RL & Simulatie
+    desc: Reinforcement learning en simulatieomgevingen op maat voor stuur- en optimalisatieproblemen.
+  - name: Advies
+    desc: Haalbaarheid, architectuur en "moeten we dit eigenlijk wel bouwen"-reviews voor projecten waar operatie en data samenkomen.
+
+work:
+  note: Uitgebreide toelichting op kenneth-b.com. Projectdetails geanonimiseerd waar nodig.
+  items:
+    - title: Voorspelde Lostijd
+      client: MPET
+      status: In productie
+      # stat/meter zijn optioneel — laat beide weg voor een puur kwalitatief resultaat.
+      stat: 84%
+      meter: 0.84
+      result: van de voorspellingen valt binnen één uur van de werkelijke lostijd.
+      desc: >-
+        Voorspelt wanneer elke container bereikbaar wordt tijdens de live scheepsoperatie,
+        zodat transporteurs uren op voorhand kunnen plannen in plaats van te wachten tot het
+        schip vertrokken is.
+      tech: Python · gradient boosting · live TOS-features
+
+    - title: Operationele Integratielaag
+      client: MPET
+      status: In productie
+      stat: ~90%
+      meter: 0.90
+      result: beoogde reductie van manueel yardplanningswerk.
+      desc: >-
+        Verbindt een legacy TOS via een API met ML-pipelines, zodat modelgestuurde
+        beslissingen automatisch draaien met volledige terugval naar manueel — planners
+        schuiven op van routinewerk naar uitzonderingsbeheer.
+      tech: Python · C# · REST-API's · event-driven
+
+    - title: Point-in-Time Datareconstructie
+      client: MPET
+      status: In productie
+      stat: 1 s
+      result: resolutie op een bevraagbare historiek van elke kritieke TOS-tabel.
+      desc: >-
+        Een CDC-pipeline streamt elke wijziging in kritieke TOS-tabellen naar de cloud en
+        vervangt periodieke snapshots door een volledig audittraject, exact tot op de
+        seconde.
+      tech: Change Data Capture · Qlik · cloud streaming · SQL
+
+    - title: Digital Twin van de Terminal
+      client: MPET
+      status: Proof of Concept
+      result: Eén live beeld van de terminal, in plaats van verspreide schermen en radioverkeer.
+      desc: >-
+        Verwerkt TOS- en machinedata tot yardbezetting, scheepsposities en kraanbewegingen
+        zoals ze gebeuren — één samenhangend beeld voor planners en ploegbazen.
+      tech: Real-time ingestie · web · Deck.gl
+
+    - title: Spreaderdetectie op Synthetische Data
+      client: Eigen R&D
+      status: Lopend
+      result: Positie en oriëntatie van de spreader uit beeld alleen, volledig getraind op synthetische data.
+      desc: >-
+        Een Unity3D-omgeving op maat rendert gelabelde camerabeelden van een kraanspreader;
+        YOLOv11-modellen voor detectie en segmentatie trainen daarop — de perceptielaag waar
+        geautomatiseerde kraansturing op steunt en die encoderdata niet kan leveren.
+      tech: Unity3D · YOLOv11 · PyTorch · synthetische data
+
+    - title: RL Kaaikraan & Spreaderskew
+      client: Eigen R&D
+      status: "2021"
+      stat: ~95%
+      meter: 0.95
+      result: van de taken van een kraanbestuurder overgenomen door een RL-agent.
+      desc: >-
+        Een zelfgebouwde Unity3D-simulator en ML-Agents-omgeving die onderzoekt of
+        reinforcement learning het gedrag van een kraanbestuurder kan overnemen — inclusief
+        een skewregelaar die de uitdemptijd van de spreader terugbracht van 27 s naar 6 s.
+      tech: Unity3D · ML-Agents · PPO · SAC
+
+engagement:
+  - label: Dagtarief
+    value: €720 / dag.
+  - label: Beschikbaarheid
+    value: Open voor nieuwe freelance opdrachten vanaf september 2026.
+  - label: Werkwijze
+    value: Remote, of on-site in Antwerpen en de Antwerpse haven.
+  - label: Vorm
+    value: Projectmatig of op retainer — van korte adviestrajecten tot builds van meerdere maanden.
+
+experience:
+  - role: Data Scientist
+    org: MSC PSA European Terminal (MPET)
+    place: Antwerpen
+    period: Jul 2024 – Heden
+    desc: >-
+      Bouwt ML-pipelines en RL-modellen voor containeroptimalisatie, een integratielaag in
+      productie die het legacy TOS koppelt aan ML-gestuurde beslissingspipelines, en een
+      real-time digital twin voor operationele beslissingen. Het werk achter de cases
+      hierboven.
+
+  - role: Terminaloperaties — Kraanbestuurder · Straddle Carrier · Havenarbeider
+    org: MSC PSA European Terminal (MPET) & CEPA
+    place: Antwerpen
+    period: 2015 – 2024
+    desc: >-
+      Bijna tien jaar over de volledige operationele hiërarchie van een van Europa's drukste
+      containerterminals — enkel- en dubbelhijs ship-to-shore kranen bedienen op de grootste
+      schepen ter wereld, straddle carriers rijden over complexe yardlayouts, en op de kaai
+      werken aan loscoördinatie en twistlockproblemen. Tegelijk een voltijds Data
+      Science-programma afgerond. Dit is de grond waarop mijn datawerk staat.
+
+  - role: Eerder — Productie & Fabricage
+    org: Xtraflex · Lier / Atlas Copco Airpower
+    place: Antwerpen
+    period: 2010 – 2015
+    desc: >-
+      Teflonslangen op maat produceren tot op strakke toleranties en het beheer van een
+      racing-onderdelenwinkel; inbouw van elektrische modules op maat in industriële
+      compressoren volgens klantspecificatie.
+
+skills:
+  - category: Programmeertalen
+    items: Python · SQL · JavaScript · C# · Java · Kotlin · Mojo · GCODE
+  - category: Data & Pipelines
+    items: Pandas · Polars · DuckDB · Dask · NumPy · Scikit-Learn · OpenCV · CDC / Qlik
+  - category: ML & Modellering
+    items: XGBoost · LightGBM · CatBoost · FastAI · PyTorch · Lightning AI · Optuna · SHAP · YOLOv11
+  - category: RL & Simulatie
+    items: Unity3D · ML-Agents · PPO · SAC
+  - category: Visualisatie
+    items: Matplotlib · Plotly · Seaborn · Folium · Tableau · Power BI · Deck.gl
+  - category: Web & Publicatie
+    items: Flask · Streamlit · Vue · Astro · HTML/Bootstrap · Quarto
+  - category: Cloud
+    items: Microsoft Azure · Google Cloud · Amazon AWS
+  - category: CAD / Engineering
+    items: Autodesk Fusion 360 · Autodesk Inventor · Onshape · SketchUp
+
+education:
+  - degree: Data Science — Professioneel Programma
+    org: Turing College
+    place: Online
+    period: Mei 2023 – Sep 2024
+    desc: >-
+      Intensief programma rond machine learning, data-engineering, deep learning en
+      toegepaste statistiek. Afgerond terwijl ik voltijds als kraanbestuurder in wisselende
+      ploegen werkte.
+
+languages:
+  - name: Nederlands
+    level: Moedertaal
+  - name: Engels
+    level: Professionele beheersing (Duolingo 130/160)
+  - name: Frans
+    level: Basis

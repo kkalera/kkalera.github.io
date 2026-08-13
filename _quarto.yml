@@ -10,8 +10,12 @@ website:
         text: Home
       - text: "Portfolio"
         menu:
+          - href: portfolio/spreader_detection.qmd
+            text: "Spreader Detection from Synthetic Data"
           - href: portfolio/rl_crane.qmd
             text: "RL Quay Crane"
+          - href: portfolio/rl_skew.qmd
+            text: "RL Spreader Skew Stabilisation"
           - href: portfolio/integration_layer.qmd
             text: "Operational Integration Layer"
           - href: portfolio/digital_twin.qmd

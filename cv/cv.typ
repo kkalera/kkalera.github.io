@@ -1,12 +1,17 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // Kenneth Breugelmans — CV
-// Design only. All content lives in content.yaml.
+// Design only. All content — including section labels — lives in the content
+// files, one per language: content.yaml (en), content.nl.yaml (nl).
 //
-//   Build:  ./scripts/build-cv.sh
-//   Watch:  typst watch cv/cv.typ --font-path cv/fonts --root .
+//   Build:  ./scripts/build-cv.sh            both languages
+//   Watch:  ./scripts/build-cv.sh watch nl
+//
+// The content file is selected with --input content=…; everything else in this
+// file is language-agnostic.
 // ─────────────────────────────────────────────────────────────────────────────
 
-#let D = yaml("content.yaml")
+#let D = yaml(sys.inputs.at("content", default: "content.yaml"))
+#let L = D.labels
 
 // ── Palette ──────────────────────────────────────────────────────────────────
 #let ink    = rgb("#16191d") // body text
@@ -33,35 +38,40 @@
 // Breathing room around the hairlines. RULE_ABOVE/BELOW frame a section rule;
 // ITEM_GAP frames the lighter rules between items inside a section. These are
 // the main levers on overall page fill — raising them costs a third page.
-// These sit just under the two-page ceiling (3 pages from ~1.12/0.72/0.78).
-#let RULE_ABOVE = 1.08em
-#let RULE_BELOW = 0.68em
-#let ITEM_GAP   = 0.74em
+// These sit just under the two-page ceiling (3 pages from ~0.82/0.54/0.58).
+#let RULE_ABOVE = 0.78em
+#let RULE_BELOW = 0.50em
+#let ITEM_GAP   = 0.55em
+
+// Side margins, in centimetres, overridable per language: Dutch sets the same
+// content ~10% longer than English and needs a slightly wider measure to hold
+// two pages. Everything else about the design stays identical across languages.
+#let MARGIN_X = D.at("layout", default: (:)).at("margin_x", default: 1.9) * 1cm
 
 // ── Document ─────────────────────────────────────────────────────────────────
 #set document(
-  title: D.name + " — Curriculum Vitae",
+  title: D.name + " — " + L.doctitle,
   author: D.name,
-  keywords: ("CV", "data science", "machine learning", "maritime", "terminal operations"),
+  keywords: D.keywords,
 )
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 #set page(
   paper: "a4",
-  margin: (top: 1.35cm, bottom: 1.0cm, left: 1.9cm, right: 1.9cm),
+  margin: (top: 1.35cm, bottom: 1.0cm, left: MARGIN_X, right: MARGIN_X),
   footer: context {
     set text(font: sans, size: 7pt, fill: faint)
     let cur = counter(page).get().first()
     let tot = counter(page).final().first()
     grid(
       columns: (1fr, auto),
-      align(left + horizon)[#D.name — Curriculum Vitae],
+      align(left + horizon)[#D.name — #L.doctitle],
       align(right + horizon)[#cur / #tot],
     )
   },
 )
 
-#set text(font: serif, size: 9.2pt, fill: ink, lang: "en", hyphenate: true)
+#set text(font: serif, size: 9.2pt, fill: ink, lang: D.lang, hyphenate: true)
 #set par(justify: true, leading: 0.55em, spacing: 0.72em)
 #show link: it => text(fill: accent, it)
 
@@ -185,14 +195,14 @@
   width: 100%, fill: wash, inset: (x: 0.75em, y: 0.6em), radius: 2pt,
   grid(
     columns: (auto, 1fr), column-gutter: 0.8em,
-    align(horizon, kicker("Status", size: 6.8pt, weight: "semibold")),
+    align(horizon, kicker(L.status, size: 6.8pt, weight: "semibold")),
     align(horizon, text(font: serif, size: 9.2pt, D.availability)),
   ),
 )
 
 // ── Sections ─────────────────────────────────────────────────────────────────
 
-#section("Profile")[
+#section(L.profile)[
   #text(size: 9.7pt, fill: ink, D.profile.lead)
   #v(0.45em)
   #text(size: 9pt, fill: muted, D.profile.body)
@@ -202,7 +212,7 @@
   #text(size: 9pt, D.edge.body)
 ]
 
-#section("Services")[
+#section(L.services)[
   #grid(
     columns: (1fr, 1fr), column-gutter: 0.85cm, row-gutter: 0.5em,
     ..D.services.map(s => {
@@ -215,32 +225,32 @@
   )
 ]
 
-#section("Selected Work")[
+#section(L.work)[
   #text(font: caption, size: 8.2pt, style: "italic", fill: faint, D.work.note)
   #v(0.7em)
   #joined(D.work.items, workitem)
 ]
 
-#section("Engagement")[
+#section(L.engagement)[
   #deflist(D.engagement.map(e => (e.label, e.value)), labelw: 3.0cm)
 ]
 
-#section("Technical Skills")[
+#section(L.skills)[
   #deflist(D.skills.map(s => (s.category, s.items)), labelw: 3.2cm)
 ]
 
-#section("Experience")[
+#section(L.experience)[
   #joined(D.experience, jobitem)
 ]
 
-#section("Education")[
+#section(L.education)[
   #joined(
     D.education.map(e => (role: e.degree, org: e.org, place: e.place, period: e.period, desc: e.desc)),
     jobitem,
   )
 ]
 
-#section("Languages")[
+#section(L.languages)[
   #set par(justify: false)
   #for (i, l) in D.languages.enumerate() {
     if i > 0 { text(size: 9pt, fill: hair, "  ·  ") }
