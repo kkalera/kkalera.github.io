@@ -1,11 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Map as MapGL, useControl } from "react-map-gl/maplibre";
-import { MapboxOverlay } from "@deck.gl/mapbox";
+import { MapLibreOverlay } from "@deck.gl/maplibre";
+import { setWorkerUrl } from "maplibre-gl";
+import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?url";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { ScenegraphLayer } from "@deck.gl/mesh-layers";
 import { registerLoaders } from "@loaders.gl/core";
 import { GLTFLoader } from "@loaders.gl/gltf";
 
+// MapLibre 6 looks for its worker next to its own module, which doesn't exist
+// once Vite pre-bundles/chunks it — point it at the emitted worker asset instead.
+setWorkerUrl(maplibreWorkerUrl);
 registerLoaders([GLTFLoader]);
 
 // A single stable loaders array — passing a fresh `[GLTFLoader]` per layer per
@@ -16,7 +21,7 @@ const LOADERS = [GLTFLoader];
 // separate canvas on top). This keeps the 3D models locked to the basemap during
 // zoom/pan — an overlaid deck canvas desyncs for a frame and the models flicker.
 function DeckOverlay(props: any) {
-  const overlay = useControl(() => new MapboxOverlay(props));
+  const overlay = useControl(() => new MapLibreOverlay(props));
   overlay.setProps(props);
   return null;
 }
